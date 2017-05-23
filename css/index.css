@@ -1,0 +1,673 @@
+*, body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #29b0bc;
+    text-decoration: none;
+}
+
+body {
+    position: relative;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei UI", "Microsoft YaHei", SimHei, "宋体", SimSun, Sans-Serif;
+    background-color: #373737;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-image: url(../img/resumeBG.jpg);
+    padding: 0;
+}
+
+.myContent {
+    position: static;
+    z-index: 1;
+    display: none;
+}
+
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.myCover {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 15;
+    background: #29b0bc;
+    background-size: 100vw 100vh;
+}
+
+.myCoverSpan {
+    display: block;
+    width: 100vw;
+    color: #fff;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.myCoverSpanLine {
+    display: block;
+    margin-top: 50px;
+    height: 10px;
+    animation: preloader_Line 1.5s infinite linear;
+}
+
+.hiddenMyDom {
+    visibility: hidden;
+}
+
+/*导航部分*/
+nav {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: -50px;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+nav ul li {
+    width: 20%;
+    list-style: none;
+    float: left;
+    text-align: center;
+}
+
+nav li a {
+    display: block;
+    color: #FFF;
+    transform: scale(1, 1);
+    transition: 0.2s;
+}
+
+nav .navli{
+    font-size: 28px;
+    position: absolute;
+    top: 8px;
+    left: calc(50% - 63px);
+}
+
+nav .icon-shouye2{
+    font-size: 25px;
+    left: calc(50% - 47px);
+}
+
+nav .icon-icon10{
+    font-size: 26px;
+    top: 6px;
+}
+
+nav .icon-zhuzhuangtu{
+    font-size: 32px;
+    left: calc(50% - 68px);
+}
+
+nav .icon-lianxi{
+    font-size: 30px;
+    top: 10px;
+    left: calc(50% - 65px);
+}
+
+nav li span {
+    line-height: 50px;
+    font-weight: bold;
+}
+
+/*头部部分*/
+header {
+    height: 500px;
+    text-align: center;
+    padding-top: 133px;
+}
+
+header .theTitle {
+    color: #FFF;
+    font-size: 50px;
+}
+
+header .theSubtitle {
+    color: #FFF;
+    margin-top: 20px;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+header .contactList li {
+    list-style-type: none;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 3px;
+    line-height: 20px;
+    margin-bottom: 50px;
+}
+
+header .contactList li a {
+    font-size: 18px;
+    width: 39px;
+    height: 39px;
+    line-height: 36px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    border: 2px solid transparent;
+    position: relative;
+    border-radius: 100%;
+    transition: 0.5s;
+}
+
+header .contactList li a:before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid #29b0bc;
+    z-index: -1;
+    transform: scale(1);
+    border-radius: 100%;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+header .contactList li a:hover, header .contactList li a:focus {
+    text-decoration: none;
+    color: #fff;
+    border-color: #fff;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
+header .contactList li a:hover:before, header .contactList li a:focus:before {
+    border-color: #fff;
+    transform: scale(1.4);
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transition: 0.4s;
+}
+
+header .myHeadPic {
+    margin: 0 auto;
+    height: 300px;
+    width: 300px;
+    border: 15px solid rgba(255, 255, 255, 0.6);
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+header .myHeadPic IMG {
+    width: 100%;
+    height: 100%;
+}
+
+#header .outMyHead {
+    position: absolute;
+    z-index: 1;
+}
+
+/*个人信息部分*/
+#Infor {
+    background: rgb(200, 200, 200);
+    padding-top: 133px;
+    width: 100%;
+    text-align: center;
+}
+
+#Infor section {
+    padding: 20px 0;
+    padding-bottom: 80px;
+    text-align: left;
+    text-indent: 2em;
+}
+
+#Infor h3 {
+    margin: 20px 0;
+}
+
+/*技能图部分*/
+#skills {
+    position: relative;
+    z-index: 2;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#skills h1 {
+    position: relative;
+    color: #FFF;
+    padding-bottom: 50px;
+    z-index: 2;
+}
+
+#skills .mySkills {
+    width: 300px;
+    float: left;
+    position: relative;
+    margin: 0 20px 60px 0;
+    text-align: left;
+}
+
+#skills .mySkillDom {
+    padding-right: 74px;
+}
+
+#skills .skillsTitle {
+    color: #FFF;
+}
+
+#skills .skillsPower {
+    height: 54px;
+    margin: 0 12px 0 8px;
+    position: relative;
+    background-color: transparent;
+    background-repeat: repeat-x;
+    background-image: url(../img/diagram-tail.gif);
+}
+
+#skills .skillsPower:before {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    content: "";
+    width: 8px;
+    left: -8px;
+    background-image: url(../img/diagram-left.png);
+}
+
+#skills .skillsPower:after {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    content: "";
+    width: 12px;
+    right: -12px;
+    background-image: url(../img/diagram-right.png);
+}
+
+#skills .skillsPower span {
+    height: 100%;
+    display: block;
+    background-color: transparent;
+}
+
+#skills .skillsPower em {
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-repeat: repeat-x;
+    background-image: url(../img/diagram-active.gif);
+    height: 100%;
+    display: block;
+}
+
+#skills .level {
+    font-family: 'Comfortaa', cursive;
+    color: #fff;
+    font-size: 30px;
+    line-height: 1.2em;
+    text-align: left;
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 4px;
+    margin: 0;
+}
+
+#skills .skillsBG {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 50%;
+    height: 100%;
+}
+
+.inSkillBG {
+    background-image: url(../img/resumeBG2.jpg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/*项目界面*/
+#myWork {
+    width: 100%;
+    background: #29b0bc;
+    text-align: center;
+    color: #FFF;
+    padding: 80px 0;
+}
+
+#myWork section {
+    transition-property: height;
+    transition-duration: 0.5s;
+}
+
+#myWork .demoList {
+    list-style: none;
+    text-align: center;
+    display: block;
+    margin-top: 30px;
+    position: relative;
+    z-index: 5;
+}
+
+#myWork .demoList li {
+    display: inline-block;
+    vertical-align: top;
+    float: none;
+    margin: 0 0 0 15px;
+}
+
+#myWork .demoList li a {
+    font-size: 20px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    line-height: 37px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: block;
+    padding: 0 19px;
+    border: 2px solid #fff;
+    transition: all 0.5s ease;
+}
+
+#myWork .demoList li.active a {
+    color: #29b0bc;
+    background-color: #fff;
+    text-decoration: none;
+}
+
+#myWork .demoList li a:hover {
+    color: #29b0bc;
+    background-color: #fff;
+    text-decoration: none;
+}
+
+#myWork .myWorks {
+    position: relative;
+}
+
+#myWork .myDemos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition-duration: 0.6s;
+}
+
+#myWork .myDemo {
+    display: block;
+    overflow: hidden;
+    margin-top: 30px;
+    position: relative;
+}
+
+#myWork .myDemo img {
+    height: 100%;
+}
+
+#myWork .littleCover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.2s;
+    z-index: 2;
+}
+
+#myWork .littleCover:hover {
+    opacity: 1;
+}
+
+#myWork .littleCover:before, #myWork .littleCover:after {
+    content: '';
+    width: 60px;
+    height: 60px;
+    margin: -30px 0 0 -30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: 0.3s;
+    transform: scale(2);
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#myWork .littleCover:before {
+    background-color: #29b0bc;
+    border-radius: 100%;
+}
+
+#myWork .littleCover:after {
+    display: block;
+    background: url(../img/magnify-alt.png) 50% 50% no-repeat;
+    z-index: 3;
+}
+
+#myWork .littleCover:hover:before, #myWork .littleCover:hover:after {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/*项目展示遮罩*/
+#myDemoInfor{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(0,0,0,0.5);
+}
+
+/*请联系我部分*/
+#contactMe {
+    width: 100%;
+    padding: 80px 0;
+    background: rgb(55,55,55);
+    text-align: center;
+    color: #FFF;
+}
+
+#contactMe h1{
+    padding-bottom: 20px;
+}
+
+#contactMe ul{
+    width: calc(50% - 3px);
+    float: left;
+    border-right: 3px solid #FFF;
+}
+
+#contactMe figure {
+    width: 50%;
+    float: left;
+}
+
+#contactMe li {
+    list-style: none;
+    padding: 15px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+#contactMe li a {
+     color: #FFF;
+}
+
+#contactMe li a:hover {
+    color: #29b0bc;
+    text-decoration: underline;
+}
+
+#contactMe li i {
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+#contactMe li:nth-child(3) i {
+    padding-right: 5px;
+}
+
+#contactMe li p {
+    padding: 10px 0px 10px 25px;
+    text-indent: 5em;
+}
+
+/*当页面大于1200px时，大屏幕，主要显示PC端*/
+@media (min-width: 1200px) {
+    nav ul, #header, #header .outMyHead, #Infor section, #skills section, #myWork section, #contactMe section ,#myDemoInfor article{
+        width: 1170px;
+        margin: 0 auto;
+    }
+
+    #skills .mySkills {
+        width: 550px;
+        margin: 0 30px 22px 0;
+    }
+
+    #myWork .myDemo {
+        width: 370px;
+        height: 320px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /*#myWork .myDemo:nth-child(3n+2){
+        margin-left: 10px;
+        margin-right: 10px;
+    }*/
+}
+
+/*在992 和1199 像素之间的屏幕里，中等屏幕，分辨率低的PC*/
+@media (min-width: 992px) and (max-width: 1199px) {
+    nav ul, #header, #header .outMyHead, #Infor section, #skills section, #myWork section, #contactMe section ,#myDemoInfor article {
+        width: 940px;
+        margin: 0 auto;
+    }
+
+    #skills .mySkills {
+        width: 283px;
+        margin: 0 30px 22px 0;
+    }
+
+    #myWork .myDemo {
+        width: 300px;
+        height: 250px;
+        margin-left: 6.6px;
+        margin-right: 6.6px;
+    }
+
+}
+
+/*在768 和991 像素之间的屏幕里，小屏幕，主要是PAD*/
+@media (min-width: 768px) and (max-width: 991px) {
+    nav ul, #header, #header .outMyHead, #Infor section, #skills section, #myWork section, #contactMe section ,#myDemoInfor article {
+        width: 724px;
+        margin: 0 auto;
+    }
+
+    #skills .mySkills {
+        width: 221px;
+    }
+
+    #skills .level {
+        right: -10px;
+    }
+
+    #myWork .myDemo {
+        width: 234px;
+        height: 180px;
+        margin-left: 3.3px;
+        margin-right: 3.3px;
+    }
+}
+
+/*在767 像素以下的屏幕里，超小屏幕，主要是手机*/
+@media (max-width: 767px) {
+    nav ul, #header, #header .outMyHead, #Infor section, #skills section, #myWork section, #contactMe section ,#myDemoInfor article {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    nav li a {
+        height: 50px;
+    }
+
+    nav .navli {
+        line-height: 50px;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    nav ul li span {
+        display: none;
+    }
+
+    nav .icon-shouye2{
+        font-size: 25px
+    }
+
+    nav .icon-icon10{
+        font-size: 26px;
+        top: -2px;
+    }
+
+    nav .icon-zhuzhuangtu{
+        font-size: 32px
+    }
+
+    nav .icon-lianxi{
+        font-size: 30px;
+        top: 2px
+    }
+
+    #header .outMyHead {
+        left: calc(25vw - 37px);
+    }
+
+    #header .outMyHead .myHeadPic {
+        width: 50vw;
+        height: 50vw;
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    #skills .mySkills {
+        width: 300px;
+        float: none;
+        margin: 0 0 10vw 0;
+    }
+
+    #skills .level {
+        right: 2vw;
+    }
+
+    #myWork .myDemo {
+        width: 90vw;
+        height: 75vw;
+    }
+
+    #contactMe ul, #contactMe figure {
+        width: 80%;
+        padding: 0 10%;
+        border: none;
+    }
+
+    #contactMe li p {
+        padding: 0;
+        text-indent: 0em;
+    }
+}

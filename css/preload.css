@@ -1,0 +1,288 @@
+
+/*字体部分*/
+@font-face {
+    font-family: "iconfont";
+    font-weight: normal;
+    font-style: normal;
+    src: url('iconfont.ttf') format('truetype'); /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+}
+
+.iconfont {
+    font-family:"iconfont" !important;
+    font-size: 32px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before { content: "\e6ed"; }
+
+.icon-icon10:before { content: "\e60a"; }
+
+.icon-qq:before { content: "\e644"; }
+
+.icon-shouye2:before { content: "\e605"; }
+
+.icon-youxiang:before { content: "\e60c"; }
+
+.icon-lianxi:before { content: "\e60d"; }
+
+.icon-lianxidianhua:before { content: "\e63e"; }
+
+.icon-email:before { content: "\e675"; }
+
+.icon-zhuzhuangtu:before { content: "\e661"; }
+
+.icon-zhuzhi:before { content: "\e672"; }
+
+.icon-ccgl-shiticangku-8:before { content: "\e585"; }
+
+
+
+/*动画部分*/
+
+.spinner {
+    margin: 0 auto;
+    width: 240px;
+    height: 240px;
+    overflow: hidden;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.spinner .loader,
+.spinner .loader:before,
+.spinner .loader:after {
+    border-radius: 50%;
+}
+
+.spinner .loader:before,
+.spinner .loader:after {
+    position: absolute;
+    content: '';
+}
+
+.spinner .loader:before {
+    width: 5.3em;
+    height: 10.3em;
+    background: #29b0bc;
+    border-radius: 10.2em 0 0 10.2em;
+    top: -0.1em;
+    left: -0.1em;
+    -webkit-transform-origin: 5.2em 5.1em;
+    transform-origin: 5.2em 5.1em;
+    -webkit-animation: spinner 2s infinite ease 1.5s;
+    animation: spinner 2s infinite ease 1.5s;
+}
+
+.spinner .loader {
+    font-size: 11px;
+    text-indent: -99999em;
+    margin: 5em auto;
+    position: relative;
+    width: 10em;
+    height: 10em;
+    box-shadow: inset 0 0 0 1em #FFF;
+}
+
+.spinner .loader:after {
+    width: 5.2em;
+    height: 10.2em;
+    background: #29b0bc;
+    border-radius: 0 10.2em 10.2em 0;
+    top: -0.1em;
+    left: 5.1em;
+    -webkit-transform-origin: 0px 5.1em;
+    transform-origin: 0px 5.1em;
+    -webkit-animation: spinner 2s infinite ease;
+    animation: spinner 2s infinite ease;
+}
+
+@-webkit-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes preloader_Line {
+    0% {
+        background: #9b59b6;
+        box-shadow: 0 0 5px #9b59b6;
+    }
+    50% {
+        background: #3498db;
+        box-shadow: 0 0 5px #3498db;
+    }
+    100% {
+        background: #9b59b6;
+        box-shadow: 0 0 5px #9b59b6;
+    }
+}
+
+@-moz-keyframes preloader_Line {
+    0% {
+        background: #9b59b6;
+        box-shadow: 0 0 5px #9b59b6;
+    }
+    50% {
+        background: #3498db;
+        box-shadow: 0 0 5px #3498db;
+    }
+    100% {
+        background: #9b59b6;
+        box-shadow: 0 0 5px #9b59b6;
+    }
+}
+
+@-ms-keyframes preloader_Line {
+    0% {
+        background: #9b59b6;
+        box-shadow: 0 0 5px #9b59b6;
+    }
+    50% {
+        background: #3498db;
+        box-shadow: 0 0 5px #3498db;
+    }
+    100% {
+        background: #9b59b6;
+        box-shadow: 0 0 5px #9b59b6;
+    }
+}
+
+@keyframes preloader_Line {
+    0% {
+        background: #9b59b6;
+        box-shadow: 0 0 5px #9b59b6;
+    }
+    50% {
+        background: #3498db;
+        box-shadow: 0 0 5px #3498db;
+    }
+    100% {
+        background: #9b59b6;
+        box-shadow: 0 0 5px #9b59b6;
+    }
+}
+
+.fadeOut-An {
+    -webkit-animation: fadeOut .5s;
+    animation: fadeOut .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+.scaleIn-An {
+    -webkit-animation: scaleIn .5s;
+    animation: scaleIn .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes scaleIn {
+    0% {
+        transform: scale3d(0.001, 0.001, 1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale3d(0.001, 0.001, 1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+    }
+}
+
+.scaleOut-An {
+    -webkit-animation: scaleOut .5s;
+    animation: scaleOut .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes scaleOut {
+    0% {
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale3d(0.001, 0.001, 1);
+        opacity: 0;
+    }
+}
+
+@keyframes scaleOut {
+    0% {
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale3d(0.001, 0.001, 1);
+        opacity: 0;
+    }
+}
+
+.listDomUp-An {
+    -webkit-animation: listDomUp .5s;
+    animation: listDomUp .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.listDomDown-An {
+    -webkit-animation: listDomDown .5s;
+    animation: listDomDown .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+/*@-webkit-keyframes listDomDown {
+    0% {height: 350px}
+    100% {height: 700px}
+}
+
+@keyframes listDomDown {
+    0% {height: 350px}
+    100% {height: 700px}
+}*/
