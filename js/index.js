@@ -312,15 +312,18 @@ function changeTheNav(key) {
 /*视差滚动部分……好吧其实也掺杂了别的有关滚动的dom，不过也能叫做滚动视差不是么*/
 function onScroll(e) {
     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    if (scrollTop < 10) {
+        myNav.style.transform = 'translate3d(0px,0px,0px)'
+    } else {
+        myNav.style.transform = 'translate3d(0px,50px,0px)'
+    }
     /*回到顶部的按钮显示与否*/
     if (!ifMobile) {
         var myTopBtn = document.getElementById("backbtn");
         if (scrollTop < 10) {
-            myTopBtn.setAttribute("class", "fadeOut-An");
-            myNav.style.transform = 'translate3d(0px,0px,0px)'
+            myTopBtn.setAttribute("class", "fadeOut-An")
         } else {
-            myTopBtn.setAttribute("class", "fadeIn-An");
-            myNav.style.transform = 'translate3d(0px,50px,0px)'
+            myTopBtn.setAttribute("class", "fadeIn-An")
         }
     }
     /*变换nav栏的颜色*/

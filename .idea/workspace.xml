@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8b8544c1-4985-4c07-9841-a1328eecc09a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/index.css" afterPath="$PROJECT_DIR$/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/preload.css" afterPath="$PROJECT_DIR$/css/preload.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/index.js" afterPath="$PROJECT_DIR$/js/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -44,8 +41,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="350" column="17" lean-forward="false" selection-start-line="350" selection-start-column="17" selection-end-line="350" selection-end-column="17" />
+            <state relative-caret-position="450">
+              <caret line="325" column="55" lean-forward="false" selection-start-line="325" selection-start-column="55" selection-end-line="325" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -304,7 +301,7 @@
       <workItem from="1495454242782" duration="9777000" />
       <workItem from="1495497624688" duration="10100000" />
       <workItem from="1495525057879" duration="6659000" />
-      <workItem from="1495536487241" duration="21892000" />
+      <workItem from="1495536487241" duration="22148000" />
     </task>
     <task id="LOCAL-00001" summary="追加项目预览遮罩">
       <created>1495522494757</created>
@@ -376,11 +373,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495589882674</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="追加滚动视差效果">
+      <created>1495613274759</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1495613274759</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144306000" />
+    <option name="totallyTimeSpent" value="144562000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -420,7 +424,8 @@
     <MESSAGE value="修复IE浏览器不支持ttf格式自定义图标的bug（果真是毒瘤！）" />
     <MESSAGE value="优化移动端性能" />
     <MESSAGE value="当demo遮罩打开时禁止页面滚动" />
-    <option name="LAST_COMMIT_MESSAGE" value="当demo遮罩打开时禁止页面滚动" />
+    <MESSAGE value="追加滚动视差效果" />
+    <option name="LAST_COMMIT_MESSAGE" value="追加滚动视差效果" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -770,8 +775,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="350" column="17" lean-forward="false" selection-start-line="350" selection-start-column="17" selection-end-line="350" selection-end-column="17" />
+        <state relative-caret-position="450">
+          <caret line="325" column="55" lean-forward="false" selection-start-line="325" selection-start-column="55" selection-end-line="325" selection-end-column="55" />
           <folding />
         </state>
       </provider>
