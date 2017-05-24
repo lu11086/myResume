@@ -26,8 +26,9 @@ imgLoader(['img/diagram-active.gif', 'img/diagram-left.png', 'img/diagram-right.
 
             /*定义skills部分视差滚动背景的位置与大小*/
             var mySkillsBG = document.querySelector(".skillsBG");
-            mySkillsBG.style.width = document.documentElement.clientWidth + 'px';
-            mySkillsBG.style.marginLeft = -document.documentElement.clientWidth * 0.5 + 'px';
+            var myDocWidth = document.documentElement.clientWidth;
+            mySkillsBG.style.width = myDocWidth + 'px';
+            mySkillsBG.style.marginLeft = -myDocWidth * 0.5 + 'px';
 
             var inSkillBG = document.querySelector(".inSkillBG");
             if (ifMobile) {
@@ -81,7 +82,7 @@ imgLoader(['img/diagram-active.gif', 'img/diagram-left.png', 'img/diagram-right.
                         setTimeout(function () {
                             BeginScroll();
                             ifDemoAn = false
-                        },550)
+                        }, 550)
                     }
                 } else {
                     document.querySelector(".closeCover").onclick = function () {
@@ -173,30 +174,30 @@ window.onload = function () {
 };
 
 function NoScroll() {
-    if(ifMobile) {
-        document.body.style.overflow='hidden';
-    }else{
-        document.documentElement.style.overflow='hidden';
-        var move=function(e){
+    if (ifMobile) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.documentElement.style.overflow = 'hidden';
+        var move = function (e) {
             e.preventDefault && e.preventDefault();
-            e.returnValue=false;
+            e.returnValue = false;
             e.stopPropagation && e.stopPropagation();
             return false;
         };
-        var keyFunc=function(e){
-            if(37<=e.keyCode && e.keyCode<=40){
+        var keyFunc = function (e) {
+            if (37 <= e.keyCode && e.keyCode <= 40) {
                 return move(e);
             }
         };
-        document.body.onkeydown=keyFunc;
+        document.body.onkeydown = keyFunc;
     }
 }
 
 function BeginScroll() {
-    if(ifMobile) {
-        document.body.style.overflow='auto';
-    }else{
-        document.documentElement.style.overflow='auto';
+    if (ifMobile) {
+        document.body.style.overflow = 'auto';
+    } else {
+        document.documentElement.style.overflow = 'auto';
     }
 }
 
@@ -243,6 +244,17 @@ function changeDemoAjax(key) {
             }
         }
     }
+}
+
+function backToTop() {
+    myBackTop = setInterval(function () {
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        var ispeed = scrollTop / 5;
+        if (scrollTop == 0) {
+            clearInterval(myBackTop);
+        }
+        document.documentElement.scrollTop = document.body.scrollTop = scrollTop - ispeed;
+    }, 30)
 }
 
 function changeTheNav(key) {
@@ -300,8 +312,16 @@ function changeTheNav(key) {
 /*视差滚动部分……好吧其实也掺杂了别的有关滚动的dom，不过也能叫做滚动视差不是么*/
 function onScroll(e) {
     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    if (!myNav.style.top) {
-        myNav.style.transform = 'translate3d(0px,50px,0px)'
+    /*回到顶部的按钮显示与否*/
+    if (!ifMobile) {
+        var myTopBtn = document.getElementById("backbtn");
+        if (scrollTop < 10) {
+            myTopBtn.setAttribute("class", "fadeOut-An");
+            myNav.style.transform = 'translate3d(0px,0px,0px)'
+        } else {
+            myTopBtn.setAttribute("class", "fadeIn-An");
+            myNav.style.transform = 'translate3d(0px,50px,0px)'
+        }
     }
     /*变换nav栏的颜色*/
     //console.log(scrollTop + ':' + myWorkTop);
@@ -316,12 +336,54 @@ function onScroll(e) {
     } else if (scrollTop <= inforTop) {
         changeTheNav(1)
     }
+    /*各部分视差滚动*/
+    var myCha = 50 - 0.6 * myDocHeight;
+    var myInforH3Top = document.getElementById("Infor").offsetTop - 0.3 * myDocHeight;
+    var myInfor = document.getElementById("Infor");
+    var mySkills = document.getElementById("skills");
+    var myPowerDom = mySkills.getElementsByClassName("mySkills");
+    var myPower = mySkills.getElementsByClassName("skillsPower");
+    var myLever = mySkills.getElementsByClassName("level");
+    var myWork = document.getElementById("myWork");
+    var myContact = document.getElementById("contactMe");
+    /*console.log(scrollTop+':'+parseInt(inforTop + myCha));*/
+    if (scrollTop > parseInt(contactMeTop + myCha)) {
+        myContact.getElementsByTagName("h1")[0].setAttribute("class", "fadeIn-An");
+        if (ifMobile) {
+            myContact.getElementsByTagName("ul")[0].setAttribute("class", "fadeFormTop-An");
+            myContact.getElementsByTagName("figure")[0].setAttribute("class", "myResume fadeFormTop-An");
+        } else {
+            myContact.getElementsByTagName("ul")[0].setAttribute("class", "fadeFormLeft-An");
+            myContact.getElementsByTagName("figure")[0].setAttribute("class", "myResume fadeFormRight-An");
+        }
+    } else if (scrollTop > parseInt(myWorkTop + myCha)) {
+        myWork.getElementsByTagName("h1")[0].setAttribute("class", "fadeIn-An");
+        myWork.getElementsByTagName("ul")[0].setAttribute("class", "demoList fadeIn-An");
+        myWork.getElementsByTagName("section")[0].setAttribute("class", "fadeIn-An");
+    } else if (scrollTop > parseInt(skillsTop + myCha)) {
+        mySkills.getElementsByTagName("h1")[0].setAttribute("class", "fadeFormBottom-An");
+        mySkills.getElementsByTagName("section")[0].setAttribute("class", "fadeFormBottom-An");
+        for(var i = 0; i<myPower.length;i++) {
+            if (parseInt(scrollTop -skillsTop + 171) > myPowerDom[i].offsetTop - 0.5 * myDocHeight) {
+                myPower[i].firstChild.style.width = myLever[i].firstChild.innerText;
+                myPower[i].firstChild.firstChild.setAttribute("class", "fullThePower-An");
+            }
+        }
+    } else if (scrollTop > myInforH3Top) {
+        var myH3 = myInfor.getElementsByTagName("h3")[0];
+        myH3.setAttribute("class", "fadeIn-An");
+        myH3.nextElementSibling.setAttribute("class", "myInfor fadeIn-An");
+        myH3.nextElementSibling.nextElementSibling.setAttribute("class", "myInfor fadeIn-An");
+    } else if (scrollTop > parseInt(inforTop + myCha)) {
+        myInfor.getElementsByTagName("h1")[0].setAttribute("class", "fadeIn-An");
+        myInfor.querySelector(".myInfor").setAttribute("class", "myInfor fadeIn-An");
+    }
     /*skills部分滚动视差*/
     if (!ifMobile) {
         var skillTop = skillsTop + 50 - myDocHeight;
         var skillsBottom = document.getElementById("contactMe").offsetTop;
         if (scrollTop >= skillTop && scrollTop <= skillsBottom) {
-            document.querySelector(".inSkillBG").style.top = 0.5 * scrollTop + 'px';
+            document.querySelector(".inSkillBG").style.top = 0.3 * scrollTop + 'px';
         }
     }
 }

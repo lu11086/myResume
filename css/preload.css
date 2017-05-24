@@ -1,4 +1,3 @@
-
 /*字体部分*/
 @font-face {
     font-family: "iconfont";
@@ -40,9 +39,7 @@
 .icon-ccgl-shiticangku-8:before { content: "\e585"; }
 
 
-
 /*动画部分*/
-
 .spinner {
     margin: 0 auto;
     width: 240px;
@@ -207,6 +204,31 @@
     }
 }
 
+.fadeIn-An {
+    -webkit-animation: fadeIn .5s;
+    animation: fadeIn .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
 .scaleIn-An {
     -webkit-animation: scaleIn .5s;
     animation: scaleIn .5s;
@@ -288,3 +310,144 @@
     0% {height: 350px}
     100% {height: 700px}
 }*/
+
+.fadeFormLeft-An {
+    -webkit-animation: fadeFormLeft .5s;
+    animation: fadeFormLeft .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeFormLeft {
+    0% {
+        transform: translate3d(-100px, 0px, 0px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeFormLeft {
+    0% {
+        transform: translate3d(-100px, 0px, 0px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+}
+
+.fadeFormRight-An {
+    -webkit-animation: fadeFormRight .5s;
+    animation: fadeFormRight .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeFormRight {
+    0% {
+        transform: translate3d(100px, 0px, 0px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeFormRight {
+    0% {
+        transform: translate3d(100px, 0px, 0px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+}
+
+.fadeFormTop-An {
+    -webkit-animation: fadeFormTop .5s;
+    animation: fadeFormTop .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeFormTop {
+    0% {
+        transform: translate3d(0px, -100px, 0px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeFormTop {
+    0% {
+        transform: translate3d(0px, -100px, 0px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+}
+
+.fadeFormBottom-An {
+    -webkit-animation: fadeFormBottom .5s;
+    animation: fadeFormBottom .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeFormBottom {
+    0% {
+        transform: translate3d(0px, 100px, 0px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeFormBottom {
+    0% {
+        transform: translate3d(0px, 100px, 0px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+}
+
+.fullThePower-An {
+    -webkit-animation: fullThePower .5s;
+    animation: fullThePower .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fullThePower {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes fullThePower {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
