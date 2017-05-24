@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8b8544c1-4985-4c07-9841-a1328eecc09a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/index.js" afterPath="$PROJECT_DIR$/js/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -301,7 +300,7 @@
       <workItem from="1495454242782" duration="9777000" />
       <workItem from="1495497624688" duration="10100000" />
       <workItem from="1495525057879" duration="6659000" />
-      <workItem from="1495536487241" duration="7227000" />
+      <workItem from="1495536487241" duration="7254000" />
     </task>
     <task id="LOCAL-00001" summary="追加项目预览遮罩">
       <created>1495522494757</created>
@@ -352,11 +351,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495588265901</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="优化移动端性能">
+      <created>1495589058362</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1495589058362</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129641000" />
+    <option name="totallyTimeSpent" value="129668000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -394,7 +400,8 @@
     <MESSAGE value="……忘了json文件要add下再上传了，webstorm这就坑了" />
     <MESSAGE value="修复切换Demo类型中有可能出现的bug" />
     <MESSAGE value="修复IE浏览器不支持ttf格式自定义图标的bug（果真是毒瘤！）" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复IE浏览器不支持ttf格式自定义图标的bug（果真是毒瘤！）" />
+    <MESSAGE value="优化移动端性能" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化移动端性能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
