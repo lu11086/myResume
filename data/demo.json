@@ -1,0 +1,40 @@
+{
+  "flag": "1",
+  "message": "数据获取成功",
+  "Demo0": {
+    "Title": "仿糖猫动画效果",
+    "ImgSrc": "img/tangmao.jpg",
+    "ImgAlt": "仿糖猫单页",
+    "Infor": "说明...",
+    "ExtraHref": "https://lu11086.github.io/animateText01/index.html",
+    "ExtraText": "点击预览本项目",
+    "CodeHref": "https://github.com/lu11086/animateText01/tree/gh-pages"
+  },
+  "Demo1": {
+    "Title": "网络记事本离线版",
+    "ImgSrc": "img/offlineNotepad.jpg",
+    "ImgAlt": "网络记事本离线版首页",
+    "Infor": "说明...",
+    "ExtraHref": "https://lu11086.github.io/offlineNotepad/index.html",
+    "ExtraText": "点击预览本项目",
+    "CodeHref": "https://github.com/lu11086/offlineNotepad/tree/gh-pages"
+  },
+  "Demo2": {
+    "Title": "换购网App",
+    "ImgSrc": "img/huangouweb.jpg",
+    "ImgAlt": "换购网App样图3",
+    "Infor": "说明...",
+    "ExtraHref": "https://github.com/lu11086/huanGoWeb/raw/master/%E6%8D%A2%E8%B4%AD%E7%BD%91-%E5%8D%95%E6%9C%BA%E6%B5%8B%E8%AF%95%20Bate0.5.7.apk",
+    "ExtraText": "点击下载APP",
+    "CodeHref": "https://github.com/lu11086/huanGoWeb"
+  },
+  "Demo3": {
+    "Title": "红包摇一摇·移动web页",
+    "ImgSrc": "img/hongbaoyao1yao.jpg",
+    "ImgAlt": "红包摇一摇样图3",
+    "Infor": "说明...",
+    "ExtraHref": "https://lu11086.github.io/animateText01/index.html",
+    "ExtraText": "点击预览本项目",
+    "CodeHref": "https://github.com/lu11086/HongBaoYao1Yao/tree/gh-pages"
+  }
+}

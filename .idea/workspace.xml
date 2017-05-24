@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b8544c1-4985-4c07-9841-a1328eecc09a" name="Default" comment="修复bug">
+    <list default="true" id="8b8544c1-4985-4c07-9841-a1328eecc09a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/demo.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/index.css" afterPath="$PROJECT_DIR$/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/index.js" afterPath="$PROJECT_DIR$/js/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,8 +21,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="158" column="52" lean-forward="false" selection-start-line="158" selection-start-column="38" selection-end-line="158" selection-end-column="52" />
+            <state relative-caret-position="250">
+              <caret line="152" column="22" lean-forward="false" selection-start-line="152" selection-start-column="22" selection-end-line="152" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -294,7 +291,7 @@
       <workItem from="1495454242782" duration="9777000" />
       <workItem from="1495497624688" duration="10100000" />
       <workItem from="1495525057879" duration="6659000" />
-      <workItem from="1495536487241" duration="4792000" />
+      <workItem from="1495536487241" duration="4931000" />
     </task>
     <task id="LOCAL-00001" summary="追加项目预览遮罩">
       <created>1495522494757</created>
@@ -310,11 +307,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495522589924</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="增加json读取的可控遮罩部分">
+      <created>1495586612019</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1495586612019</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127206000" />
+    <option name="totallyTimeSpent" value="127345000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -348,7 +352,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="追加项目预览遮罩" />
     <MESSAGE value="修复bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复bug" />
+    <MESSAGE value="增加json读取的可控遮罩部分" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加json读取的可控遮罩部分" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -695,8 +700,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="158" column="52" lean-forward="false" selection-start-line="158" selection-start-column="38" selection-end-line="158" selection-end-column="52" />
+        <state relative-caret-position="250">
+          <caret line="152" column="22" lean-forward="false" selection-start-line="152" selection-start-column="22" selection-end-line="152" selection-end-column="22" />
           <folding />
         </state>
       </provider>
