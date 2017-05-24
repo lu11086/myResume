@@ -137,25 +137,25 @@
         <section>
             <div class="myWorks">
                 <div class="myDemos">
-                    <a href="" title="仿糖猫动画效果" class="myDemo PCDemo">
+                    <a href="" title="仿糖猫动画效果" class="myDemo PCDemo" onclick="openDemoCover(0);return false;">
                         <img src="img/tangmao.jpg" alt="仿糖猫动画效果">
                         <span class="littleCover"></span>
                     </a>
                 </div>
                 <div class="myDemos">
-                    <a href="" title="网络记事本离线版" class="myDemo PCDemo">
+                    <a href="" title="网络记事本离线版" class="myDemo PCDemo" onclick="openDemoCover(1);return false;">
                         <img src="img/offlineNotepad.jpg" alt="网络记事本离线版">
                         <span class="littleCover"></span>
                     </a>
                 </div>
                 <div class="myDemos">
-                    <a href="" title="换购网App" class="myDemo mobileDemo">
+                    <a href="" title="换购网App" class="myDemo mobileDemo" onclick="openDemoCover(2);return false;">
                         <img src="img/huangouweb.jpg" alt="换购网App">
                         <span class="littleCover"></span>
                     </a>
                 </div>
                 <div class="myDemos">
-                    <a href="" title="红包摇一摇" class="myDemo mobileDemo">
+                    <a href="" title="红包摇一摇" class="myDemo mobileDemo" onclick="openDemoCover(3);return false;">
                         <img src="img/hongbaoyao1yao.jpg" alt="红包摇一摇页面">
                         <span class="littleCover"></span>
                     </a>
@@ -185,7 +185,18 @@
     </div>
 </div>
 <div id="myDemoInfor">
-    <article></article>
+    <div class="closeCover">X</div>
+    <article>
+        <figure class="myResume">
+            <figcaption>样式占位样板</figcaption>
+            <img src="img/tangmao.jpg" alt="样板">
+        </figure>
+        <p class="DemoInformation">说明部分：balabala……</p>
+        <a href="" class="extraInfor">点击预览本项目</a>
+        <div class="clear"></div>
+        <a href="" class="codeView">点击查看源代码</a>
+        <div class="clear"></div>
+    </article>
 </div>
 </body>
 <script src="js/imgLoaded.js"></script>

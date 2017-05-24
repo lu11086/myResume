@@ -2,7 +2,7 @@
  * Created by Palov on 2017/5/16.
  */
 
-var myDemos, demoClientH, demoClientW;
+var myDemos, demoClientH, demoClientW, myDemoInfor, ifDemoAn = false;
 var inforTop, skillsTop, myWorkTop, contactMeTop, myNav, myNavTagA;
 var myDocHeight = document.documentElement.clientHeight;
 var ifMobile = false;
@@ -72,6 +72,23 @@ imgLoader(['img/diagram-active.gif', 'img/diagram-left.png', 'img/diagram-right.
 
                 myNav = document.getElementsByTagName('nav')[0];
                 myNavTagA = myNav.getElementsByTagName('a');
+
+                myDemoInfor = document.getElementById("myDemoInfor");
+                if (ifMobile) {
+                    myDemoInfor.onclick = function () {
+                        ifDemoAn = true;
+                        myDemoInfor.style.transform = 'translate3d(0px,0px,0px) scale3d(1,1,1)';
+                    }
+                } else {
+                    document.querySelector(".closeCover").onclick = function () {
+                        ifDemoAn = true;
+                        myDemoInfor.style.transform = 'translate3d(0px,' + 0.75 * myDocHeight + 'px,0px) scale3d(0.001,0.001,0)';
+                        setTimeout(function () {
+                            myDemoInfor.style.transform = 'translate3d(0px,0px,0px)';
+                            ifDemoAn = false
+                        }, 550)
+                    };
+                }
                 changeTheNav(1)
             }, 500)
         }, 500)
@@ -145,10 +162,47 @@ window.onload = function () {
                 document.getElementById("myWork").getElementsByTagName("section")[0].style.height = (parseInt(theDomNow / 3 + 1)) * demoClientH + 'px';
             }
             return false;
-
         }
     }
 };
+
+function openDemoCover(Atitle) {
+    if (!ifDemoAn) {
+        var myDemo;
+        if (window.XMLHttpRequest) {
+            myDemo = new XMLHttpRequest();
+        } else if (window.ActiveXObject) {
+            myDemo = new ActiveXObject("Microsoft.XMLHTTP");
+        } else {
+            alert("请升级至最新版本的浏览器");
+        }
+        if (myDemo != null) {
+            myDemo.open("GET", "data/demo.json", true);
+            myDemo.send(null);
+            myDemo.onreadystatechange = function () {
+                if (myDemo.readyState == 4 && myDemo.status == 200) {
+                    var obj = JSON.parse(myDemo.responseText);
+                    for (var i in obj) {
+                        if (i == 'Demo' + Atitle) {
+                            var myDemoCover = document.getElementById("myDemoInfor");
+                            myDemoCover.getElementsByTagName('figcaption')[0].innerText = obj[i].Title;
+                            var myImg = myDemoCover.getElementsByTagName('img')[0];
+                            myImg.setAttribute("src", obj[i].ImgSrc);
+                            myImg.setAttribute("alt", obj[i].ImgAlt);
+                            myDemoCover.getElementsByTagName("p")[0].innerText = obj[i].Infor;
+                            var myExtra = myDemoCover.querySelector(".extraInfor");
+                            myExtra.innerText = obj[i].ExtraText;
+                            myExtra.setAttribute("href", obj[i].ExtraHref);
+                            myDemoCover.querySelector(".codeView").setAttribute("href", obj[i].CodeHref);
+                        }
+                    }
+                }
+            }
+        }
+
+        myDemoInfor.style.transform = 'translate3d(0px,' + myDocHeight + 'px,0px) scale3d(1,1,1)';
+    }
+}
 
 function changeTheNav(key) {
     if (key == 1 || key == 3) {
@@ -175,7 +229,7 @@ function changeTheNav(key) {
                 this.style.color = 'rgb(255,255,255)'
             }
         }
-    } else if(key == 4) {
+    } else if (key == 4) {
         myNav.style.background = 'rgb(41,176,188)';
         for (var i = 0; i < myNavTagA.length; i++) {
             myNavTagA[i].onmousemove = function () {
@@ -187,7 +241,7 @@ function changeTheNav(key) {
                 this.style.color = 'rgb(255,255,255)'
             }
         }
-    } else if(key == 5) {
+    } else if (key == 5) {
         myNav.style.background = 'rgb(55,55,55)';
         for (var i = 0; i < myNavTagA.length; i++) {
             myNavTagA[i].onmousemove = function () {
@@ -205,7 +259,9 @@ function changeTheNav(key) {
 /*视差滚动部分……好吧其实也掺杂了别的有关滚动的dom，不过也能叫做滚动视差不是么*/
 function onScroll(e) {
     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    if(!myNav.style.top) {myNav.style.transform = 'translate3d(0px,50px,0px)'}
+    if (!myNav.style.top) {
+        myNav.style.transform = 'translate3d(0px,50px,0px)'
+    }
     /*变换nav栏的颜色*/
     //console.log(scrollTop + ':' + myWorkTop);
     if (scrollTop > contactMeTop) {

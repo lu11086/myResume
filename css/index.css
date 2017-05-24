@@ -87,29 +87,29 @@ nav li a {
     transition: 0.2s;
 }
 
-nav .navli{
+nav .navli {
     font-size: 28px;
     position: absolute;
     top: 8px;
     left: calc(50% - 63px);
 }
 
-nav .icon-shouye2{
+nav .icon-shouye2 {
     font-size: 25px;
     left: calc(50% - 47px);
 }
 
-nav .icon-icon10{
+nav .icon-icon10 {
     font-size: 26px;
     top: 6px;
 }
 
-nav .icon-zhuzhuangtu{
+nav .icon-zhuzhuangtu {
     font-size: 32px;
     left: calc(50% - 68px);
 }
 
-nav .icon-lianxi{
+nav .icon-lianxi {
     font-size: 30px;
     top: 10px;
     left: calc(50% - 65px);
@@ -461,30 +461,78 @@ header .myHeadPic IMG {
 }
 
 /*项目展示遮罩*/
-#myDemoInfor{
+#myDemoInfor {
     height: 100vh;
     width: 100vw;
     position: fixed;
-    top: 0;
+    top: -100vh;
     left: 0;
     z-index: 100;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    color: #FFF;
+}
+
+#myDemoInfor .closeCover {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    background: #e22222;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 30px;
+}
+
+#myDemoInfor article {
+    background: rgb(0, 0, 0);
+    height: calc(100% - 60px);
+    padding: 30px 0;
+}
+
+#myDemoInfor article figcaption {
+    font-size: 20px;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+#myDemoInfor article img {
+    width: 70%;
+    margin: 0 15%;
+}
+
+#myDemoInfor .DemoInformation {
+    padding: 20px 15%;
+}
+
+#myDemoInfor .extraInfor, #myDemoInfor .codeView {
+    font-size: 18px;
+    padding-top: 10px;
+    padding-right: 15%;
+    float: right;
+}
+
+#myDemoInfor article a:hover{
+    text-decoration: underline;
 }
 
 /*请联系我部分*/
 #contactMe {
     width: 100%;
     padding: 80px 0;
-    background: rgb(55,55,55);
+    background: rgb(55, 55, 55);
     text-align: center;
     color: #FFF;
 }
 
-#contactMe h1{
+#contactMe h1 {
     padding-bottom: 20px;
 }
 
-#contactMe ul{
+#contactMe ul {
     width: calc(50% - 3px);
     float: left;
     border-right: 3px solid #FFF;
@@ -503,7 +551,7 @@ header .myHeadPic IMG {
 }
 
 #contactMe li a {
-     color: #FFF;
+    color: #FFF;
 }
 
 #contactMe li a:hover {
@@ -527,7 +575,7 @@ header .myHeadPic IMG {
 
 /*当页面大于1200px时，大屏幕，主要显示PC端*/
 @media (min-width: 1200px) {
-    nav ul, #header, #header .outMyHead, #Infor section, #skills section, #myWork section, #contactMe section ,#myDemoInfor article{
+    nav ul, #header, #header .outMyHead, #Infor section, #skills section, #myWork section, #contactMe section, #myDemoInfor article {
         width: 1170px;
         margin: 0 auto;
     }
@@ -552,7 +600,7 @@ header .myHeadPic IMG {
 
 /*在992 和1199 像素之间的屏幕里，中等屏幕，分辨率低的PC*/
 @media (min-width: 992px) and (max-width: 1199px) {
-    nav ul, #header, #header .outMyHead, #Infor section, #skills section, #myWork section, #contactMe section ,#myDemoInfor article {
+    nav ul, #header, #header .outMyHead, #Infor section, #skills section, #myWork section, #contactMe section, #myDemoInfor article {
         width: 940px;
         margin: 0 auto;
     }
@@ -573,7 +621,7 @@ header .myHeadPic IMG {
 
 /*在768 和991 像素之间的屏幕里，小屏幕，主要是PAD*/
 @media (min-width: 768px) and (max-width: 991px) {
-    nav ul, #header, #header .outMyHead, #Infor section, #skills section, #myWork section, #contactMe section ,#myDemoInfor article {
+    nav ul, #header, #header .outMyHead, #Infor section, #skills section, #myWork section, #contactMe section, #myDemoInfor article {
         width: 724px;
         margin: 0 auto;
     }
@@ -596,7 +644,7 @@ header .myHeadPic IMG {
 
 /*在767 像素以下的屏幕里，超小屏幕，主要是手机*/
 @media (max-width: 767px) {
-    nav ul, #header, #header .outMyHead, #Infor section, #skills section, #myWork section, #contactMe section ,#myDemoInfor article {
+    nav ul, #header, #header .outMyHead, #Infor section, #skills section, #myWork section, #contactMe section, #myDemoInfor article {
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -616,20 +664,20 @@ header .myHeadPic IMG {
         display: none;
     }
 
-    nav .icon-shouye2{
+    nav .icon-shouye2 {
         font-size: 25px
     }
 
-    nav .icon-icon10{
+    nav .icon-icon10 {
         font-size: 26px;
         top: -2px;
     }
 
-    nav .icon-zhuzhuangtu{
+    nav .icon-zhuzhuangtu {
         font-size: 32px
     }
 
-    nav .icon-lianxi{
+    nav .icon-lianxi {
         font-size: 30px;
         top: 2px
     }
@@ -669,5 +717,9 @@ header .myHeadPic IMG {
     #contactMe li p {
         padding: 0;
         text-indent: 0em;
+    }
+
+    #myDemoInfor .closeCover {
+        display: none;
     }
 }
