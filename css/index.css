@@ -484,6 +484,9 @@ header .myHeadPic IMG {
     text-align: center;
     line-height: 40px;
     font-size: 30px;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
 }
 
 #myDemoInfor article {

@@ -2,7 +2,7 @@
  * Created by Palov on 2017/5/16.
  */
 
-var myDemos, demoClientH, demoClientW, myDemoInfor, ifDemoAn = false;
+var myDemoInfor, ifDemoAn = false;
 var inforTop, skillsTop, myWorkTop, contactMeTop, myNav, myNavTagA;
 var myDocHeight = document.documentElement.clientHeight;
 var ifMobile = false;
@@ -46,9 +46,9 @@ imgLoader(['img/diagram-active.gif', 'img/diagram-left.png', 'img/diagram-right.
                     myWorkImgs[i].style.marginLeft = -(myWorkImgs[i].clientWidth - document.querySelector(".myDemo").clientWidth) * 0.5 + 'px';
                 }
 
-                myDemos = document.getElementsByClassName("myDemos");
-                demoClientH = document.querySelector(".myDemos").clientHeight;
-                demoClientW = document.querySelector(".myDemos").clientWidth;
+                var myDemos = document.getElementsByClassName("myDemos");
+                var demoClientH = document.querySelector(".myDemos").clientHeight;
+                var demoClientW = document.querySelector(".myDemos").clientWidth;
                 if (ifMobile) {
                     document.getElementById("myWork").getElementsByTagName("section")[0].style.height = myDemosHeight * demoClientH + 'px';
                     for (var i = 0; i < myDemos.length; i++) {
@@ -89,6 +89,73 @@ imgLoader(['img/diagram-active.gif', 'img/diagram-left.png', 'img/diagram-right.
                         }, 550)
                     };
                 }
+
+                /*myDemo部分切换类型*/
+                var myDemoList = document.querySelector(".demoList").getElementsByTagName('a');
+                var myDemo = document.getElementsByClassName("myDemo");
+                for (var i = 0; i < myDemoList.length; i++) {
+                    myDemoList[i].onclick = function () {
+                        for (var i = 0; i < myDemoList.length; i++) {
+                            myDemoList[i].parentNode.setAttribute("class", "");
+                        }
+                        this.parentNode.setAttribute("class", "active");
+
+                        var str = true;
+                        if (this.title == 'All') {
+                            str = false;
+                        } else if (this.title == 'PC') {
+                            str = 'PC';
+                        } else if (this.title == 'mobile') {
+                            str = 'mobile';
+                        }
+
+                        var theDomNow = 0;
+                        for (var i = 0; i < myDemos.length; i++) {
+                            var myArr = myDemo[i].className.split(" ");
+                            myDemo[i].className = myArr[0] + ' ' + myArr[1];
+                            if (str) {
+                                var myStr = 'myDemo ' + str + 'Demo';
+                                /*console.log(myStr);*/
+                                if (myDemo[i].className == myStr) {
+                                    myDemo[i].className += ' scaleIn-An';
+                                    theDomNow = theDomNow + 1;
+                                } else {
+                                    myDemo[i].className += ' scaleOut-An';
+                                }
+                                if (ifMobile) {
+                                    myDemos[i].style.transform = 'translate3d(0px,' + (theDomNow - 1) * demoClientH + 'px,0px)'
+                                } else {
+                                    if (theDomNow < 3) {
+                                        myDemos[i].style.transform = 'translate3d(' + (theDomNow - 1) * demoClientW + 'px,0px,0px)'
+                                    } else {
+                                        myDemos[i].style.transform = 'translate3d(' + (theDomNow - 4) * demoClientW + 'px,' + demoClientH + 'px,0px)'
+                                    }
+                                }
+
+                            } else {
+                                myDemo[i].className += ' scaleIn-An';
+                                if (ifMobile) {
+                                    myDemos[i].style.transform = 'translate3d(0px,' + theDomNow * demoClientH + 'px,0px)'
+                                } else {
+                                    if (theDomNow < 3) {
+                                        myDemos[i].style.transform = 'translate3d(' + theDomNow * demoClientW + 'px,0px,0px)'
+                                    } else {
+                                        myDemos[i].style.transform = 'translate3d(' + (theDomNow - 3) * demoClientW + 'px,' + demoClientH + 'px,0px)'
+                                    }
+                                }
+                                theDomNow = theDomNow + 1;
+                            }
+                        }
+                        /*console.log(parseInt(theDomNow / 3 + 1) * demoClientH);*/
+                        if (ifMobile) {
+                            document.getElementById("myWork").getElementsByTagName("section")[0].style.height = theDomNow * demoClientH + 'px';
+                        } else {
+                            document.getElementById("myWork").getElementsByTagName("section")[0].style.height = (parseInt(theDomNow / 3 + 1)) * demoClientH + 'px';
+                        }
+                        return false;
+                    }
+                }
+
                 changeTheNav(1)
             }, 500)
         }, 500)
@@ -98,74 +165,9 @@ imgLoader(['img/diagram-active.gif', 'img/diagram-left.png', 'img/diagram-right.
 window.onload = function () {
     addEvent(window, 'scroll', onScroll);
     onScroll();
-
-    /*myDemo部分切换类型*/
-    var myDemoList = document.querySelector(".demoList").getElementsByTagName('a');
-    var myDemo = document.getElementsByClassName("myDemo");
-    for (var i = 0; i < myDemoList.length; i++) {
-        myDemoList[i].onclick = function () {
-            for (var i = 0; i < myDemoList.length; i++) {
-                myDemoList[i].parentNode.setAttribute("class", "");
-            }
-            this.parentNode.setAttribute("class", "active");
-
-            var str = true;
-            if (this.title == 'All') {
-                str = false;
-            } else if (this.title == 'PC') {
-                str = 'PC';
-            } else if (this.title == 'mobile') {
-                str = 'mobile';
-            }
-
-            var theDomNow = 0;
-            for (var i = 0; i < myDemos.length; i++) {
-                var myArr = myDemo[i].className.split(" ");
-                myDemo[i].className = myArr[0] + ' ' + myArr[1];
-                if (str) {
-                    var myStr = 'myDemo ' + str + 'Demo';
-                    /*console.log(myStr);*/
-                    if (myDemo[i].className == myStr) {
-                        myDemo[i].className += ' scaleIn-An';
-                        theDomNow = theDomNow + 1;
-                    } else {
-                        myDemo[i].className += ' scaleOut-An';
-                    }
-                    if (ifMobile) {
-                        myDemos[i].style.transform = 'translate3d(0px,' + (theDomNow - 1) * demoClientH + 'px,0px)'
-                    } else {
-                        if (theDomNow < 3) {
-                            myDemos[i].style.transform = 'translate3d(' + (theDomNow - 1) * demoClientW + 'px,0px,0px)'
-                        } else {
-                            myDemos[i].style.transform = 'translate3d(' + (theDomNow - 4) * demoClientW + 'px,' + demoClientH + 'px,0px)'
-                        }
-                    }
-
-                } else {
-                    myDemo[i].className += ' scaleIn-An';
-                    if (ifMobile) {
-                        myDemos[i].style.transform = 'translate3d(0px,' + theDomNow * demoClientH + 'px,0px)'
-                    } else {
-                        if (theDomNow < 3) {
-                            myDemos[i].style.transform = 'translate3d(' + theDomNow * demoClientW + 'px,0px,0px)'
-                        } else {
-                            myDemos[i].style.transform = 'translate3d(' + (theDomNow - 3) * demoClientW + 'px,' + demoClientH + 'px,0px)'
-                        }
-                    }
-                    theDomNow = theDomNow + 1;
-                }
-            }
-            /*console.log(parseInt(theDomNow / 3 + 1) * demoClientH);*/
-            if (ifMobile) {
-                document.getElementById("myWork").getElementsByTagName("section")[0].style.height = theDomNow * demoClientH + 'px';
-            } else {
-                document.getElementById("myWork").getElementsByTagName("section")[0].style.height = (parseInt(theDomNow / 3 + 1)) * demoClientH + 'px';
-            }
-            return false;
-        }
-    }
 };
 
+/*项目遮罩读取数据与动画*/
 function openDemoCover(Atitle) {
     if (!ifDemoAn) {
         var myDemo;
@@ -199,8 +201,9 @@ function openDemoCover(Atitle) {
                 }
             }
         }
-
-        myDemoInfor.style.transform = 'translate3d(0px,' + myDocHeight + 'px,0px) scale3d(1,1,1)';
+        setTimeout(function () {
+            myDemoInfor.style.transform = 'translate3d(0px,' + myDocHeight + 'px,0px) scale3d(1,1,1)';
+        },150)
     }
 }
 
