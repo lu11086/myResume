@@ -31,12 +31,12 @@ imgLoader(['img/diagram-active.gif', 'img/diagram-left.png', 'img/diagram-right.
 
             var inSkillBG = document.querySelector(".inSkillBG");
             if (ifMobile) {
-                inSkillBG.style.height = 1.1 * mySkillsBG.clientHeight + 'px';
-                inSkillBG.style.marginTop = -0.8 * mySkillsBG.clientHeight + 'px';
+                inSkillBG.style.height = mySkillsBG.clientHeight + 'px';
             } else {
                 inSkillBG.style.height = 1.5 * mySkillsBG.clientHeight + 'px';
                 inSkillBG.style.marginTop = -mySkillsBG.clientHeight + 'px';
             }
+            changeDemoAjax(0);
             setTimeout(function () {
                 document.querySelector(".spinner").style.display = 'none';
                 document.querySelector(".myCover").style.display = 'none';
@@ -78,6 +78,9 @@ imgLoader(['img/diagram-active.gif', 'img/diagram-left.png', 'img/diagram-right.
                     myDemoInfor.onclick = function () {
                         ifDemoAn = true;
                         myDemoInfor.style.transform = 'translate3d(0px,0px,0px) scale3d(1,1,1)';
+                        setTimeout(function () {
+                            ifDemoAn = false
+                        },550)
                     }
                 } else {
                     document.querySelector(".closeCover").onclick = function () {
@@ -170,40 +173,44 @@ window.onload = function () {
 /*项目遮罩读取数据与动画*/
 function openDemoCover(Atitle) {
     if (!ifDemoAn) {
-        var myDemo;
-        if (window.XMLHttpRequest) {
-            myDemo = new XMLHttpRequest();
-        } else if (window.ActiveXObject) {
-            myDemo = new ActiveXObject("Microsoft.XMLHTTP");
-        } else {
-            alert("请升级至最新版本的浏览器");
-        }
-        if (myDemo != null) {
-            myDemo.open("GET", "data/demo.json", true);
-            myDemo.send(null);
-            myDemo.onreadystatechange = function () {
-                if (myDemo.readyState == 4 && myDemo.status == 200) {
-                    var obj = JSON.parse(myDemo.responseText);
-                    for (var i in obj) {
-                        if (i == 'Demo' + Atitle) {
-                            var myDemoCover = document.getElementById("myDemoInfor");
-                            myDemoCover.getElementsByTagName('figcaption')[0].innerText = obj[i].Title;
-                            var myImg = myDemoCover.getElementsByTagName('img')[0];
-                            myImg.setAttribute("src", obj[i].ImgSrc);
-                            myImg.setAttribute("alt", obj[i].ImgAlt);
-                            myDemoCover.getElementsByTagName("p")[0].innerText = obj[i].Infor;
-                            var myExtra = myDemoCover.querySelector(".extraInfor");
-                            myExtra.innerText = obj[i].ExtraText;
-                            myExtra.setAttribute("href", obj[i].ExtraHref);
-                            myDemoCover.querySelector(".codeView").setAttribute("href", obj[i].CodeHref);
-                        }
+        changeDemoAjax(Atitle);
+        setTimeout(function () {
+            myDemoInfor.style.transform = 'translate3d(0px,' + myDocHeight + 'px,0px) scale3d(1,1,1)';
+        }, 150)
+    }
+}
+
+function changeDemoAjax(key) {
+    var myDemo;
+    if (window.XMLHttpRequest) {
+        myDemo = new XMLHttpRequest();
+    } else if (window.ActiveXObject) {
+        myDemo = new ActiveXObject("Microsoft.XMLHTTP");
+    } else {
+        alert("请升级至最新版本的浏览器");
+    }
+    if (myDemo != null) {
+        myDemo.open("GET", "data/demo.json", true);
+        myDemo.send(null);
+        myDemo.onreadystatechange = function () {
+            if (myDemo.readyState == 4 && myDemo.status == 200) {
+                var obj = JSON.parse(myDemo.responseText);
+                for (var i in obj) {
+                    if (i == 'Demo' + key) {
+                        var myDemoCover = document.getElementById("myDemoInfor");
+                        myDemoCover.getElementsByTagName('figcaption')[0].innerText = obj[i].Title;
+                        var myImg = myDemoCover.getElementsByTagName('img')[0];
+                        myImg.setAttribute("src", obj[i].ImgSrc);
+                        myImg.setAttribute("alt", obj[i].ImgAlt);
+                        myDemoCover.getElementsByTagName("p")[0].innerText = obj[i].Infor;
+                        var myExtra = myDemoCover.querySelector(".extraInfor");
+                        myExtra.innerText = obj[i].ExtraText;
+                        myExtra.setAttribute("href", obj[i].ExtraHref);
+                        myDemoCover.querySelector(".codeView").setAttribute("href", obj[i].CodeHref);
                     }
                 }
             }
         }
-        setTimeout(function () {
-            myDemoInfor.style.transform = 'translate3d(0px,' + myDocHeight + 'px,0px) scale3d(1,1,1)';
-        },150)
     }
 }
 
@@ -279,10 +286,12 @@ function onScroll(e) {
         changeTheNav(1)
     }
     /*skills部分滚动视差*/
-    var skillTop = skillsTop + 50 - myDocHeight;
-    var skillsBottom = document.getElementById("contactMe").offsetTop;
-    if (scrollTop >= skillTop && scrollTop <= skillsBottom) {
-        document.querySelector(".inSkillBG").style.top = 0.5 * scrollTop + 'px';
+    if (!ifMobile) {
+        var skillTop = skillsTop + 50 - myDocHeight;
+        var skillsBottom = document.getElementById("contactMe").offsetTop;
+        if (scrollTop >= skillTop && scrollTop <= skillsBottom) {
+            document.querySelector(".inSkillBG").style.top = 0.5 * scrollTop + 'px';
+        }
     }
 }
 
