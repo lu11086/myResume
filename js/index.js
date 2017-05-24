@@ -79,6 +79,7 @@ imgLoader(['img/diagram-active.gif', 'img/diagram-left.png', 'img/diagram-right.
                         ifDemoAn = true;
                         myDemoInfor.style.transform = 'translate3d(0px,0px,0px) scale3d(1,1,1)';
                         setTimeout(function () {
+                            BeginScroll();
                             ifDemoAn = false
                         },550)
                     }
@@ -88,6 +89,7 @@ imgLoader(['img/diagram-active.gif', 'img/diagram-left.png', 'img/diagram-right.
                         myDemoInfor.style.transform = 'translate3d(0px,' + 0.75 * myDocHeight + 'px,0px) scale3d(0.001,0.001,0)';
                         setTimeout(function () {
                             myDemoInfor.style.transform = 'translate3d(0px,0px,0px)';
+                            BeginScroll();
                             ifDemoAn = false
                         }, 550)
                     };
@@ -170,12 +172,41 @@ window.onload = function () {
     onScroll();
 };
 
+function NoScroll() {
+    if(ifMobile) {
+        document.body.style.overflow='hidden';
+    }else{
+        document.documentElement.style.overflow='hidden';
+        var move=function(e){
+            e.preventDefault && e.preventDefault();
+            e.returnValue=false;
+            e.stopPropagation && e.stopPropagation();
+            return false;
+        };
+        var keyFunc=function(e){
+            if(37<=e.keyCode && e.keyCode<=40){
+                return move(e);
+            }
+        };
+        document.body.onkeydown=keyFunc;
+    }
+}
+
+function BeginScroll() {
+    if(ifMobile) {
+        document.body.style.overflow='auto';
+    }else{
+        document.documentElement.style.overflow='auto';
+    }
+}
+
 /*项目遮罩读取数据与动画*/
 function openDemoCover(Atitle) {
     if (!ifDemoAn) {
         changeDemoAjax(Atitle);
         setTimeout(function () {
             myDemoInfor.style.transform = 'translate3d(0px,' + myDocHeight + 'px,0px) scale3d(1,1,1)';
+            NoScroll()
         }, 150)
     }
 }
