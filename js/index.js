@@ -234,7 +234,7 @@ function changeDemoAjax(key) {
                         var myImg = myDemoCover.getElementsByTagName('img')[0];
                         myImg.setAttribute("src", obj[i].ImgSrc);
                         myImg.setAttribute("alt", obj[i].ImgAlt);
-                        myDemoCover.getElementsByTagName("p")[0].innerText = obj[i].Infor;
+                        myDemoCover.getElementsByTagName("p")[0].innerHTML = obj[i].Infor;
                         var myExtra = myDemoCover.querySelector(".extraInfor");
                         myExtra.innerText = obj[i].ExtraText;
                         myExtra.setAttribute("href", obj[i].ExtraHref);

@@ -5,7 +5,7 @@
     "Title": "仿糖猫动画效果",
     "ImgSrc": "img/tangmao.jpg",
     "ImgAlt": "仿糖猫单页",
-    "Infor": "说明...",
+    "Infor": "仿照糖猫E1好友版手表第五页动画，设计了CSS3为主的自动动画播放，以及播放完动画后可以手动调节位置以播放动画的功能。优化了动画交互效果，在原网页基础上增加动画回弹效果。",
     "ExtraHref": "https://lu11086.github.io/animateText01/index.html",
     "ExtraText": "点击预览本项目",
     "CodeHref": "https://github.com/lu11086/animateText01/tree/gh-pages"
@@ -14,7 +14,7 @@
     "Title": "网络记事本离线版",
     "ImgSrc": "img/offlineNotepad.jpg",
     "ImgAlt": "网络记事本离线版首页",
-    "Infor": "说明...",
+    "Infor": "自行设计的一套网页，模拟了后台传输数据过程，以json格式的数据，通过H5本地存储（localstrong）借以实现存储+读取效果。通过设置2个主要的localstrong数据库，实现了一个库用来存储日志、读取日志，另一个库用来储存被删除的日志，以便日后恢复或彻底删除（说白了就是回收站）。同时借用H5新标签添加已上传的文件。<br>PS：由于项目完成时间较早只预留了英文版与移动版接口，并未实现其功能。",
     "ExtraHref": "https://lu11086.github.io/offlineNotepad/index.html",
     "ExtraText": "点击预览本项目",
     "CodeHref": "https://github.com/lu11086/offlineNotepad/tree/gh-pages"
@@ -23,7 +23,7 @@
     "Title": "换购网App",
     "ImgSrc": "img/huangouweb.jpg",
     "ImgAlt": "换购网App样图3",
-    "Infor": "说明...",
+    "Infor": "模仿多个app设计的一个web版app，主要用来测试使用多种手机独有功能与移动端布局。同样使用localstrong本地存储模拟后台，创建了一个用户库（注册用户、用户登录、用户个人信息、用户商品信息与app内操作等信息的存储与读取），一个商品库（发布商品、商品详细信息等信息的存取）。优化了各种屏幕下的显示效果，对资源的管理进行了一定程度的优化，减少碎片化。",
     "ExtraHref": "https://github.com/lu11086/huanGoWeb/raw/master/%E6%8D%A2%E8%B4%AD%E7%BD%91-%E5%8D%95%E6%9C%BA%E6%B5%8B%E8%AF%95%20Bate0.5.7.apk",
     "ExtraText": "点击下载APP",
     "CodeHref": "https://github.com/lu11086/huanGoWeb"
@@ -32,7 +32,7 @@
     "Title": "红包摇一摇·移动web页",
     "ImgSrc": "img/hongbaoyao1yao.jpg",
     "ImgAlt": "红包摇一摇样图3",
-    "Infor": "说明...",
+    "Infor": "一组移动端web单页，通过点击或扫描首页二维码进入摇奖页。并设计摇奖函数进行抽奖活动。",
     "ExtraHref": "https://lu11086.github.io/animateText01/index.html",
     "ExtraText": "点击预览本项目",
     "CodeHref": "https://github.com/lu11086/HongBaoYao1Yao/tree/gh-pages"
