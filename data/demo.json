@@ -33,7 +33,7 @@
     "ImgSrc": "img/hongbaoyao1yao.jpg",
     "ImgAlt": "红包摇一摇样图3",
     "Infor": "一组移动端web单页，通过点击或扫描首页二维码进入摇奖页。并设计摇奖函数进行抽奖活动。",
-    "ExtraHref": "https://lu11086.github.io/animateText01/index.html",
+    "ExtraHref": "https://lu11086.github.io/HongBaoYao1Yao/index.html",
     "ExtraText": "点击预览本项目",
     "CodeHref": "https://github.com/lu11086/HongBaoYao1Yao/tree/gh-pages"
   }
