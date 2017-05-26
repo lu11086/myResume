@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8b8544c1-4985-4c07-9841-a1328eecc09a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/demo.json" afterPath="$PROJECT_DIR$/data/demo.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/index.js" afterPath="$PROJECT_DIR$/js/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,8 +21,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="193" column="29" lean-forward="true" selection-start-line="193" selection-start-column="29" selection-end-line="193" selection-end-column="29" />
+            <state relative-caret-position="163">
+              <caret line="194" column="21" lean-forward="true" selection-start-line="194" selection-start-column="21" selection-end-line="194" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -31,18 +31,18 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
+            <state relative-caret-position="25">
               <caret line="517" column="34" lean-forward="false" selection-start-line="517" selection-start-column="34" selection-end-line="517" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="350" column="57" lean-forward="false" selection-start-line="350" selection-start-column="56" selection-end-line="350" selection-end-column="57" />
+            <state relative-caret-position="-136">
+              <caret line="173" column="43" lean-forward="false" selection-start-line="173" selection-start-column="43" selection-end-line="173" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -51,8 +51,8 @@
       <file leaf-file-name="preload.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/preload.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="7" column="61" lean-forward="false" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
+            <state relative-caret-position="775">
+              <caret line="452" column="1" lean-forward="false" selection-start-line="452" selection-start-column="1" selection-end-line="452" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -71,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="demo.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="demo.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/demo.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="35" column="58" lean-forward="false" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+            <state relative-caret-position="500">
+              <caret line="28" column="31" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -116,12 +116,12 @@
         <option value="$PROJECT_DIR$/js/skrollr.min.js" />
         <option value="$USER_HOME$/Desktop/Live demo for HighClass Portfolio WordPress Theme #50917_files/main-style.css" />
         <option value="$PROJECT_DIR$/data/package.json" />
-        <option value="$PROJECT_DIR$/css/preload.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/css/index.css" />
         <option value="$PROJECT_DIR$/data/demo.json" />
+        <option value="$PROJECT_DIR$/css/preload.css" />
+        <option value="$PROJECT_DIR$/js/index.js" />
       </list>
     </option>
   </component>
@@ -189,7 +189,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../webstrom/滑屏动画测试" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../strml.net-master" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -303,7 +303,9 @@
       <workItem from="1495525057879" duration="6659000" />
       <workItem from="1495536487241" duration="24013000" />
       <workItem from="1495672293527" duration="3002000" />
-      <workItem from="1495676890646" duration="1532000" />
+      <workItem from="1495676890646" duration="4372000" />
+      <workItem from="1495722558421" duration="1124000" />
+      <workItem from="1495756780047" duration="4944000" />
     </task>
     <task id="LOCAL-00001" summary="追加项目预览遮罩">
       <created>1495522494757</created>
@@ -403,11 +405,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495677639632</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="=-=修复因为脑残造成的小bug">
+      <created>1495678450676</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1495678450676</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150961000" />
+    <option name="totallyTimeSpent" value="159869000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -451,7 +460,8 @@
     <MESSAGE value="修复移动端nav有时不会弹出的bug" />
     <MESSAGE value="优化显示效果" />
     <MESSAGE value="添加demo说明" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加demo说明" />
+    <MESSAGE value="=-=修复因为脑残造成的小bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="=-=修复因为脑残造成的小bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -752,11 +762,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/package.json" />
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="175">
@@ -766,10 +771,31 @@
           <second_editor />
         </state>
       </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/demo.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="28" column="31" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="194" column="21" lean-forward="true" selection-start-line="194" selection-start-column="21" selection-end-line="194" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
+        <state relative-caret-position="25">
           <caret line="517" column="34" lean-forward="false" selection-start-line="517" selection-start-column="34" selection-end-line="517" selection-end-column="34" />
           <folding />
         </state>
@@ -777,32 +803,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/preload.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="7" column="61" lean-forward="false" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
+        <state relative-caret-position="775">
+          <caret line="452" column="1" lean-forward="false" selection-start-line="452" selection-start-column="1" selection-end-line="452" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="350" column="57" lean-forward="false" selection-start-line="350" selection-start-column="56" selection-end-line="350" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="193" column="29" lean-forward="true" selection-start-line="193" selection-start-column="29" selection-end-line="193" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/demo.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="35" column="58" lean-forward="false" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+        <state relative-caret-position="-136">
+          <caret line="173" column="43" lean-forward="false" selection-start-line="173" selection-start-column="43" selection-end-line="173" selection-end-column="43" />
           <folding />
         </state>
       </provider>

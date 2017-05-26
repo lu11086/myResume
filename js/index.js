@@ -2,7 +2,7 @@
  * Created by Palov on 2017/5/16.
  */
 
-var myDemoInfor, ifDemoAn = false;
+var myScroll, myDemoInfor, ifDemoAn = false;
 var inforTop, skillsTop, myWorkTop, contactMeTop, myNav, myNavTagA;
 var myDocHeight = document.documentElement.clientHeight;
 var ifMobile = false;
@@ -162,7 +162,53 @@ imgLoader(['img/diagram-active.gif', 'img/diagram-left.png', 'img/diagram-right.
                     }
                 }
 
-                changeTheNav(1)
+                changeTheNav(1);
+
+                if (!ifMobile) {
+                    var scrollFunc = function (e) {
+                        if (myScroll) {
+                            clearInterval(myScroll);
+                        }
+                        e = e || window.event;
+                        if (e.wheelDelta) {//IE/Opera/Chrome
+                            var ispeed = 35;
+                            var speedChange = 1.25;
+                            if (e.wheelDelta > 0) {
+                             myScroll = setInterval(function () {
+                                    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                                    if (ispeed < 0.2) {
+                                        clearInterval(myScroll);
+                                    }
+                                    document.documentElement.scrollTop = document.body.scrollTop = scrollTop - ispeed;
+                                 if (ispeed < 2.5) {
+                                        speedChange -= 0.1;
+                                    }
+                                 ispeed -= speedChange;
+                                }, 15)
+                            } else {
+                                myScroll = setInterval(function () {
+                                    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                                    if (ispeed < 0.2) {
+                                        clearInterval(myScroll);
+                                    }
+                                    document.documentElement.scrollTop = document.body.scrollTop = scrollTop + ispeed;
+                                    if (ispeed < 2.5) {
+                                        speedChange -= 0.1;
+                                    }
+                                    ispeed -= speedChange;
+                                }, 15)
+                            }
+                        } else if (e.detail) {//Firefox
+                            console.log(e.detail);
+                        }
+                    };
+
+                    /*注册事件*/
+                    if (document.addEventListener) {
+                        document.addEventListener('DOMMouseScroll', scrollFunc, false);
+                    }//W3C
+                    window.onmousewheel = document.onmousewheel = scrollFunc;//IE/Opera/Chrome
+                }
             }, 500)
         }, 500)
     }
@@ -311,6 +357,7 @@ function changeTheNav(key) {
 
 /*视差滚动部分……好吧其实也掺杂了别的有关滚动的dom，不过也能叫做滚动视差不是么*/
 function onScroll(e) {
+
     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     if (scrollTop < 10) {
         myNav.style.transform = 'translate3d(0px,0px,0px)'
@@ -350,7 +397,7 @@ function onScroll(e) {
     var myWork = document.getElementById("myWork");
     var myContact = document.getElementById("contactMe");
     /*console.log(scrollTop+':'+parseInt(inforTop + myCha));*/
-    if (scrollTop > parseInt(contactMeTop + myCha)) {
+    if (scrollTop > parseInt(contactMeTop + 50 - 0.8 * myDocHeight)) {
         myContact.getElementsByTagName("h1")[0].setAttribute("class", "fadeIn-An");
         if (ifMobile) {
             myContact.getElementsByTagName("ul")[0].setAttribute("class", "fadeFormTop-An");
@@ -366,8 +413,8 @@ function onScroll(e) {
     } else if (scrollTop > parseInt(skillsTop + myCha)) {
         mySkills.getElementsByTagName("h1")[0].setAttribute("class", "fadeFormBottom-An");
         mySkills.getElementsByTagName("section")[0].setAttribute("class", "fadeFormBottom-An");
-        for(var i = 0; i<myPower.length;i++) {
-            if (parseInt(scrollTop -skillsTop + 171) > myPowerDom[i].offsetTop - 0.5 * myDocHeight) {
+        for (var i = 0; i < myPower.length; i++) {
+            if (parseInt(scrollTop - skillsTop + 171) > myPowerDom[i].offsetTop - 0.5 * myDocHeight) {
                 myPower[i].firstChild.style.width = myLever[i].firstChild.innerText;
                 myPower[i].firstChild.firstChild.setAttribute("class", "fullThePower-An");
             }
