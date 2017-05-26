@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b8544c1-4985-4c07-9841-a1328eecc09a" name="Default" comment="">
+    <list default="true" id="8b8544c1-4985-4c07-9841-a1328eecc09a" name="Default" comment="增加PC端滚动惯性的效果——js定时器模拟的">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/index.js" afterPath="$PROJECT_DIR$/js/index.js" />
     </list>
@@ -41,8 +41,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
-              <caret line="173" column="43" lean-forward="false" selection-start-line="173" selection-start-column="43" selection-end-line="173" selection-end-column="43" />
+            <state relative-caret-position="437">
+              <caret line="254" column="1" lean-forward="true" selection-start-line="254" selection-start-column="1" selection-end-line="254" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -305,7 +305,7 @@
       <workItem from="1495672293527" duration="3002000" />
       <workItem from="1495676890646" duration="4372000" />
       <workItem from="1495722558421" duration="1124000" />
-      <workItem from="1495756780047" duration="4944000" />
+      <workItem from="1495756780047" duration="5815000" />
     </task>
     <task id="LOCAL-00001" summary="追加项目预览遮罩">
       <created>1495522494757</created>
@@ -412,11 +412,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495678450676</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="增加PC端滚动惯性的效果——js定时器模拟的">
+      <created>1495761973055</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1495761973055</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159869000" />
+    <option name="totallyTimeSpent" value="160740000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -461,7 +468,8 @@
     <MESSAGE value="优化显示效果" />
     <MESSAGE value="添加demo说明" />
     <MESSAGE value="=-=修复因为脑残造成的小bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="=-=修复因为脑残造成的小bug" />
+    <MESSAGE value="增加PC端滚动惯性的效果——js定时器模拟的" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加PC端滚动惯性的效果——js定时器模拟的" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -811,8 +819,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="173" column="43" lean-forward="false" selection-start-line="173" selection-start-column="43" selection-end-line="173" selection-end-column="43" />
+        <state relative-caret-position="437">
+          <caret line="254" column="1" lean-forward="true" selection-start-line="254" selection-start-column="1" selection-end-line="254" selection-end-column="1" />
           <folding />
         </state>
       </provider>

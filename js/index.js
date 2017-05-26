@@ -6,6 +6,7 @@ var myScroll, myDemoInfor, ifDemoAn = false;
 var inforTop, skillsTop, myWorkTop, contactMeTop, myNav, myNavTagA;
 var myDocHeight = document.documentElement.clientHeight;
 var ifMobile = false;
+var myDemoView = false;
 
 /*判断是移动端还是PC端*/
 if (document.documentElement.clientWidth < 767) {
@@ -162,53 +163,14 @@ imgLoader(['img/diagram-active.gif', 'img/diagram-left.png', 'img/diagram-right.
                     }
                 }
 
+
+                /*注册事件*/
+                if (document.addEventListener) {
+                    document.addEventListener('DOMMouseScroll', scrollFunc, false);
+                }//W3C
+                window.onmousewheel = document.onmousewheel = scrollFunc;//IE/Opera/Chrome
+
                 changeTheNav(1);
-
-                if (!ifMobile) {
-                    var scrollFunc = function (e) {
-                        if (myScroll) {
-                            clearInterval(myScroll);
-                        }
-                        e = e || window.event;
-                        if (e.wheelDelta) {//IE/Opera/Chrome
-                            var ispeed = 35;
-                            var speedChange = 1.25;
-                            if (e.wheelDelta > 0) {
-                             myScroll = setInterval(function () {
-                                    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-                                    if (ispeed < 0.2) {
-                                        clearInterval(myScroll);
-                                    }
-                                    document.documentElement.scrollTop = document.body.scrollTop = scrollTop - ispeed;
-                                 if (ispeed < 2.5) {
-                                        speedChange -= 0.1;
-                                    }
-                                 ispeed -= speedChange;
-                                }, 15)
-                            } else {
-                                myScroll = setInterval(function () {
-                                    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-                                    if (ispeed < 0.2) {
-                                        clearInterval(myScroll);
-                                    }
-                                    document.documentElement.scrollTop = document.body.scrollTop = scrollTop + ispeed;
-                                    if (ispeed < 2.5) {
-                                        speedChange -= 0.1;
-                                    }
-                                    ispeed -= speedChange;
-                                }, 15)
-                            }
-                        } else if (e.detail) {//Firefox
-                            console.log(e.detail);
-                        }
-                    };
-
-                    /*注册事件*/
-                    if (document.addEventListener) {
-                        document.addEventListener('DOMMouseScroll', scrollFunc, false);
-                    }//W3C
-                    window.onmousewheel = document.onmousewheel = scrollFunc;//IE/Opera/Chrome
-                }
             }, 500)
         }, 500)
     }
@@ -218,6 +180,53 @@ window.onload = function () {
     addEvent(window, 'scroll', onScroll);
     onScroll();
 };
+
+function scrollFunc(e) {
+    /*如果是PC端监控滑轮动作并增加滚动效果*/
+    if (!myDemoView) {
+        if (!ifMobile) {
+            if (myScroll) {
+                clearInterval(myScroll);
+            }
+            e = e || window.event;
+            if (e.wheelDelta) {//IE/Opera/Chrome
+                myScrollpage(e.wheelDelta)
+            } else if (e.detail) {//Firefox
+                myScrollpage(e.detail)
+            }
+        }
+    }
+}
+
+function myScrollpage(key) {
+    var ispeed = 35;
+    var speedChange = 1.25;
+    if (key > 0) {
+        myScroll = setInterval(function () {
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            if (ispeed < 0.2) {
+                clearInterval(myScroll);
+            }
+            document.documentElement.scrollTop = document.body.scrollTop = scrollTop - ispeed;
+            if (ispeed < 2.5) {
+                speedChange -= 0.1;
+            }
+            ispeed -= speedChange;
+        }, 15)
+    } else {
+        myScroll = setInterval(function () {
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            if (ispeed < 0.2) {
+                clearInterval(myScroll);
+            }
+            document.documentElement.scrollTop = document.body.scrollTop = scrollTop + ispeed;
+            if (ispeed < 2.5) {
+                speedChange -= 0.1;
+            }
+            ispeed -= speedChange;
+        }, 15)
+    }
+}
 
 function NoScroll() {
     if (ifMobile) {
@@ -237,6 +246,12 @@ function NoScroll() {
         };
         document.body.onkeydown = keyFunc;
     }
+    myDemoView = true;
+    /*注册事件*/
+    if (document.addEventListener) {
+        document.addEventListener('DOMMouseScroll', null, false);
+    }//W3C
+    window.onmousewheel = document.onmousewheel = '';//IE/Opera/Chrome
 }
 
 function BeginScroll() {
@@ -245,6 +260,12 @@ function BeginScroll() {
     } else {
         document.documentElement.style.overflow = 'auto';
     }
+    myDemoView = false;
+    /*注册事件*/
+    if (document.addEventListener) {
+        document.addEventListener('DOMMouseScroll', scrollFunc, false);
+    }//W3C
+    window.onmousewheel = document.onmousewheel = scrollFunc;//IE/Opera/Chrome
 }
 
 /*项目遮罩读取数据与动画*/
