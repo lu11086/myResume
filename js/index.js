@@ -208,7 +208,7 @@ function myScrollpage(key) {
                 clearInterval(myScroll);
             }
             document.documentElement.scrollTop = document.body.scrollTop = scrollTop - ispeed;
-            if (ispeed < 2.5) {
+            if (ispeed < 2 * speedChange) {
                 speedChange -= 0.1;
             }
             ispeed -= speedChange;
@@ -220,7 +220,7 @@ function myScrollpage(key) {
                 clearInterval(myScroll);
             }
             document.documentElement.scrollTop = document.body.scrollTop = scrollTop + ispeed;
-            if (ispeed < 2.5) {
+            if (ispeed < 2 * speedChange) {
                 speedChange -= 0.1;
             }
             ispeed -= speedChange;
@@ -301,7 +301,7 @@ function changeDemoAjax(key) {
                         var myImg = myDemoCover.getElementsByTagName('img')[0];
                         myImg.setAttribute("src", obj[i].ImgSrc);
                         myImg.setAttribute("alt", obj[i].ImgAlt);
-                        myDemoCover.getElementsByTagName("p")[0].innerHTML = obj[i].Infor;
+                        myDemoCover.getElementsByTagName("p")[0].innerText = obj[i].Infor;
                         var myExtra = myDemoCover.querySelector(".extraInfor");
                         myExtra.innerText = obj[i].ExtraText;
                         myExtra.setAttribute("href", obj[i].ExtraHref);
