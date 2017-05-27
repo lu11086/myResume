@@ -590,7 +590,14 @@ header .myHeadPic IMG {
 
 #contactMe figure {
     width: 50%;
+    height: 200px;
     float: left;
+    overflow: hidden;
+}
+
+#contactMe figure img{
+    width:80%;
+    margin-top: 10px;
 }
 
 #contactMe li {
@@ -623,6 +630,7 @@ header .myHeadPic IMG {
     text-indent: 5em;
 }
 
+
 /*当页面大于1200px时，大屏幕，主要显示PC端*/
 @media (min-width: 1200px) {
     nav ul, #header, #header .outMyHead, #Infor section, #skills section, #myWork section, #contactMe section, #myDemoInfor article {
@@ -640,6 +648,10 @@ header .myHeadPic IMG {
         height: 320px;
         margin-left: 10px;
         margin-right: 10px;
+    }
+
+    #contactMe figure {
+        height: 200px;
     }
 
     /*#myWork .myDemo:nth-child(3n+2){
@@ -689,6 +701,10 @@ header .myHeadPic IMG {
         height: 180px;
         margin-left: 3.3px;
         margin-right: 3.3px;
+    }
+
+    #contactMe figure {
+        height: 220px;
     }
 }
 
@@ -771,5 +787,9 @@ header .myHeadPic IMG {
 
     #myDemoInfor .closeCover {
         display: none;
+    }
+
+    #contactMe figure {
+        height: auto;
     }
 }

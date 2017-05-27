@@ -14,167 +14,172 @@ if (document.documentElement.clientWidth < 767) {
     var myDemosHeight = 4;
 }
 
-/*预加载图片*/
-imgLoader(['img/diagram-active.gif', 'img/diagram-left.png', 'img/diagram-right.png', 'img/diagram-tail.gif', 'img/head.jpg', 'img/huangouweb.jpg', 'img/magnify-alt.png', 'img/offlineNotepad.jpg', 'img/resumeBG.jpg', 'img/resumeBG2.jpg', 'img/tangmao.jpg', 'img/hongbaoyao1yao.jpg'], function (percentage) {
-    var percentT = percentage * 100;
-    document.querySelector(".myCoverSpan").innerText = 'Loading ' + (parseInt(percentT)) + '%';
-    document.querySelector(".myCoverSpanLine").style.width = percentT + '%';
-    if (percentage == 1) {
-        setTimeout(function () {
-            document.querySelector(".myContent").style.display = 'block';
-            document.querySelector(".spinner").setAttribute("class", "spinner fadeOut-An");
-            document.querySelector(".myCover").setAttribute("class", "myCover fadeOut-An");
-
-            /*定义skills部分视差滚动背景的位置与大小*/
-            var mySkillsBG = document.querySelector(".skillsBG");
-            var myDocWidth = document.documentElement.clientWidth;
-            mySkillsBG.style.width = myDocWidth + 'px';
-            mySkillsBG.style.marginLeft = -myDocWidth * 0.5 + 'px';
-
-            var inSkillBG = document.querySelector(".inSkillBG");
-            if (ifMobile) {
-                inSkillBG.style.height = mySkillsBG.clientHeight + 'px';
-            } else {
-                inSkillBG.style.height = 1.5 * mySkillsBG.clientHeight + 'px';
-                inSkillBG.style.marginTop = -mySkillsBG.clientHeight + 'px';
-            }
-            changeDemoAjax(0);
+if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE6.0" || navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE7.0" || navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE8.0" || navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE9.0") {
+    alert("您的浏览器版本过低，请下载IE9以上版本");
+    window.location.href = "https://github.com/lu11086/myResume";
+} else {
+    /*预加载图片*/
+    imgLoader(['img/diagram-active.gif', 'img/diagram-left.png', 'img/diagram-right.png', 'img/diagram-tail.gif', 'img/head.jpg', 'img/myPhoto.png', 'img/huangouweb.jpg', 'img/magnify-alt.png', 'img/offlineNotepad.jpg', 'img/resumeBG.jpg', 'img/resumeBG2.jpg', 'img/tangmao.jpg', 'img/hongbaoyao1yao.jpg', 'img/resumePDF.jpg'], function (percentage) {
+        var percentT = percentage * 100;
+        document.querySelector(".myCoverSpan").innerText = 'Loading ' + (parseInt(percentT)) + '%';
+        document.querySelector(".myCoverSpanLine").style.width = percentT + '%';
+        if (percentage == 1) {
             setTimeout(function () {
-                document.querySelector(".spinner").style.display = 'none';
-                document.querySelector(".myCover").style.display = 'none';
+                document.querySelector(".myContent").style.display = 'block';
+                document.querySelector(".spinner").setAttribute("class", "spinner fadeOut-An");
+                document.querySelector(".myCover").setAttribute("class", "myCover fadeOut-An");
 
-                var myWorkImgs = document.querySelector(".myWorks").getElementsByTagName("img");
-                for (var i = 0; i < myWorkImgs.length; i++) {
-                    myWorkImgs[i].style.marginLeft = -(myWorkImgs[i].clientWidth - document.querySelector(".myDemo").clientWidth) * 0.5 + 'px';
-                }
+                /*定义skills部分视差滚动背景的位置与大小*/
+                var mySkillsBG = document.querySelector(".skillsBG");
+                var myDocWidth = document.documentElement.clientWidth;
+                mySkillsBG.style.width = myDocWidth + 'px';
+                mySkillsBG.style.marginLeft = -myDocWidth * 0.5 + 'px';
 
-                var myDemos = document.getElementsByClassName("myDemos");
-                var demoClientH = document.querySelector(".myDemos").clientHeight;
-                var demoClientW = document.querySelector(".myDemos").clientWidth;
+                var inSkillBG = document.querySelector(".inSkillBG");
                 if (ifMobile) {
-                    document.getElementById("myWork").getElementsByTagName("section")[0].style.height = myDemosHeight * demoClientH + 'px';
-                    for (var i = 0; i < myDemos.length; i++) {
-                        myDemos[i].style.transform = 'translate3d(0px,' + i * demoClientH + 'px,0px)'
-                    }
+                    inSkillBG.style.height = mySkillsBG.clientHeight + 'px';
                 } else {
-                    document.getElementById("myWork").getElementsByTagName("section")[0].style.height = 2 * demoClientH + 'px';
-                    for (var i = 0; i < myDemos.length; i++) {
-                        if (i < 3) {
-                            myDemos[i].style.transform = 'translate3d(' + i * demoClientW + 'px,0px,0px)'
-                        } else {
-                            myDemos[i].style.transform = 'translate3d(' + (i - 3) * demoClientW + 'px,' + demoClientH + 'px,0px)'
-                        }
-                    }
+                    inSkillBG.style.height = 1.5 * mySkillsBG.clientHeight + 'px';
+                    inSkillBG.style.marginTop = -mySkillsBG.clientHeight + 'px';
                 }
+                changeDemoAjax(0);
+                setTimeout(function () {
+                    document.querySelector(".spinner").style.display = 'none';
+                    document.querySelector(".myCover").style.display = 'none';
 
-                inforTop = document.getElementById("Infor").offsetTop - 50;
-                skillsTop = document.getElementById("skills").offsetTop - 50;
-                myWorkTop = document.getElementById("myWork").offsetTop - 50;
-                contactMeTop = document.getElementById("contactMe").offsetTop - 50;
-
-                myNav = document.getElementsByTagName('nav')[0];
-                myNavTagA = myNav.getElementsByTagName('a');
-
-                myDemoInfor = document.getElementById("myDemoInfor");
-                if (ifMobile) {
-                    myDemoInfor.onclick = function () {
-                        ifDemoAn = true;
-                        myDemoInfor.style.transform = 'translate3d(0px,0px,0px) scale3d(1,1,1)';
-                        setTimeout(function () {
-                            BeginScroll();
-                            ifDemoAn = false
-                        }, 550)
+                    var myWorkImgs = document.querySelector(".myWorks").getElementsByTagName("img");
+                    for (var i = 0; i < myWorkImgs.length; i++) {
+                        myWorkImgs[i].style.marginLeft = -(myWorkImgs[i].clientWidth - document.querySelector(".myDemo").clientWidth) * 0.5 + 'px';
                     }
-                } else {
-                    document.querySelector(".closeCover").onclick = function () {
-                        ifDemoAn = true;
-                        myDemoInfor.style.transform = 'translate3d(0px,' + 0.75 * myDocHeight + 'px,0px) scale3d(0.001,0.001,0)';
-                        setTimeout(function () {
-                            myDemoInfor.style.transform = 'translate3d(0px,0px,0px)';
-                            BeginScroll();
-                            ifDemoAn = false
-                        }, 550)
-                    };
-                }
 
-                /*myDemo部分切换类型*/
-                var myDemoList = document.querySelector(".demoList").getElementsByTagName('a');
-                var myDemo = document.getElementsByClassName("myDemo");
-                for (var i = 0; i < myDemoList.length; i++) {
-                    myDemoList[i].onclick = function () {
-                        for (var i = 0; i < myDemoList.length; i++) {
-                            myDemoList[i].parentNode.setAttribute("class", "");
-                        }
-                        this.parentNode.setAttribute("class", "active");
-
-                        var str = true;
-                        if (this.title == 'All') {
-                            str = false;
-                        } else if (this.title == 'PC') {
-                            str = 'PC';
-                        } else if (this.title == 'mobile') {
-                            str = 'mobile';
-                        }
-
-                        var theDomNow = 0;
+                    var myDemos = document.getElementsByClassName("myDemos");
+                    var demoClientH = document.querySelector(".myDemos").clientHeight;
+                    var demoClientW = document.querySelector(".myDemos").clientWidth;
+                    if (ifMobile) {
+                        document.getElementById("myWork").getElementsByTagName("section")[0].style.height = myDemosHeight * demoClientH + 'px';
                         for (var i = 0; i < myDemos.length; i++) {
-                            var myArr = myDemo[i].className.split(" ");
-                            myDemo[i].className = myArr[0] + ' ' + myArr[1];
-                            if (str) {
-                                var myStr = 'myDemo ' + str + 'Demo';
-                                /*console.log(myStr);*/
-                                if (myDemo[i].className == myStr) {
-                                    myDemo[i].className += ' scaleIn-An';
-                                    theDomNow = theDomNow + 1;
-                                } else {
-                                    myDemo[i].className += ' scaleOut-An';
-                                }
-                                if (ifMobile) {
-                                    myDemos[i].style.transform = 'translate3d(0px,' + (theDomNow - 1) * demoClientH + 'px,0px)'
-                                } else {
-                                    if (theDomNow < 3) {
-                                        myDemos[i].style.transform = 'translate3d(' + (theDomNow - 1) * demoClientW + 'px,0px,0px)'
-                                    } else {
-                                        myDemos[i].style.transform = 'translate3d(' + (theDomNow - 4) * demoClientW + 'px,' + demoClientH + 'px,0px)'
-                                    }
-                                }
-
+                            myDemos[i].style.transform = 'translate3d(0px,' + i * demoClientH + 'px,0px)'
+                        }
+                    } else {
+                        document.getElementById("myWork").getElementsByTagName("section")[0].style.height = 2 * demoClientH + 'px';
+                        for (var i = 0; i < myDemos.length; i++) {
+                            if (i < 3) {
+                                myDemos[i].style.transform = 'translate3d(' + i * demoClientW + 'px,0px,0px)'
                             } else {
-                                myDemo[i].className += ' scaleIn-An';
-                                if (ifMobile) {
-                                    myDemos[i].style.transform = 'translate3d(0px,' + theDomNow * demoClientH + 'px,0px)'
-                                } else {
-                                    if (theDomNow < 3) {
-                                        myDemos[i].style.transform = 'translate3d(' + theDomNow * demoClientW + 'px,0px,0px)'
-                                    } else {
-                                        myDemos[i].style.transform = 'translate3d(' + (theDomNow - 3) * demoClientW + 'px,' + demoClientH + 'px,0px)'
-                                    }
-                                }
-                                theDomNow = theDomNow + 1;
+                                myDemos[i].style.transform = 'translate3d(' + (i - 3) * demoClientW + 'px,' + demoClientH + 'px,0px)'
                             }
                         }
-                        /*console.log(parseInt(theDomNow / 3 + 1) * demoClientH);*/
-                        if (ifMobile) {
-                            document.getElementById("myWork").getElementsByTagName("section")[0].style.height = theDomNow * demoClientH + 'px';
-                        } else {
-                            document.getElementById("myWork").getElementsByTagName("section")[0].style.height = (parseInt(theDomNow / 3 + 1)) * demoClientH + 'px';
-                        }
-                        return false;
                     }
-                }
+
+                    inforTop = document.getElementById("Infor").offsetTop - 50;
+                    skillsTop = document.getElementById("skills").offsetTop - 50;
+                    myWorkTop = document.getElementById("myWork").offsetTop - 50;
+                    contactMeTop = document.getElementById("contactMe").offsetTop - 50;
+
+                    myNav = document.getElementsByTagName('nav')[0];
+                    myNavTagA = myNav.getElementsByTagName('a');
+
+                    myDemoInfor = document.getElementById("myDemoInfor");
+                    if (ifMobile) {
+                        myDemoInfor.onclick = function () {
+                            ifDemoAn = true;
+                            myDemoInfor.style.transform = 'translate3d(0px,0px,0px) scale3d(1,1,1)';
+                            setTimeout(function () {
+                                BeginScroll();
+                                ifDemoAn = false
+                            }, 550)
+                        }
+                    } else {
+                        document.querySelector(".closeCover").onclick = function () {
+                            ifDemoAn = true;
+                            myDemoInfor.style.transform = 'translate3d(0px,' + 0.75 * myDocHeight + 'px,0px) scale3d(0.001,0.001,0)';
+                            setTimeout(function () {
+                                myDemoInfor.style.transform = 'translate3d(0px,0px,0px)';
+                                BeginScroll();
+                                ifDemoAn = false
+                            }, 550)
+                        };
+                    }
+
+                    /*myDemo部分切换类型*/
+                    var myDemoList = document.querySelector(".demoList").getElementsByTagName('a');
+                    var myDemo = document.getElementsByClassName("myDemo");
+                    for (var i = 0; i < myDemoList.length; i++) {
+                        myDemoList[i].onclick = function () {
+                            for (var i = 0; i < myDemoList.length; i++) {
+                                myDemoList[i].parentNode.setAttribute("class", "");
+                            }
+                            this.parentNode.setAttribute("class", "active");
+
+                            var str = true;
+                            if (this.title == 'All') {
+                                str = false;
+                            } else if (this.title == 'PC') {
+                                str = 'PC';
+                            } else if (this.title == 'mobile') {
+                                str = 'mobile';
+                            }
+
+                            var theDomNow = 0;
+                            for (var i = 0; i < myDemos.length; i++) {
+                                var myArr = myDemo[i].className.split(" ");
+                                myDemo[i].className = myArr[0] + ' ' + myArr[1];
+                                if (str) {
+                                    var myStr = 'myDemo ' + str + 'Demo';
+                                    /*console.log(myStr);*/
+                                    if (myDemo[i].className == myStr) {
+                                        myDemo[i].className += ' scaleIn-An';
+                                        theDomNow = theDomNow + 1;
+                                    } else {
+                                        myDemo[i].className += ' scaleOut-An';
+                                    }
+                                    if (ifMobile) {
+                                        myDemos[i].style.transform = 'translate3d(0px,' + (theDomNow - 1) * demoClientH + 'px,0px)'
+                                    } else {
+                                        if (theDomNow < 3) {
+                                            myDemos[i].style.transform = 'translate3d(' + (theDomNow - 1) * demoClientW + 'px,0px,0px)'
+                                        } else {
+                                            myDemos[i].style.transform = 'translate3d(' + (theDomNow - 4) * demoClientW + 'px,' + demoClientH + 'px,0px)'
+                                        }
+                                    }
+
+                                } else {
+                                    myDemo[i].className += ' scaleIn-An';
+                                    if (ifMobile) {
+                                        myDemos[i].style.transform = 'translate3d(0px,' + theDomNow * demoClientH + 'px,0px)'
+                                    } else {
+                                        if (theDomNow < 3) {
+                                            myDemos[i].style.transform = 'translate3d(' + theDomNow * demoClientW + 'px,0px,0px)'
+                                        } else {
+                                            myDemos[i].style.transform = 'translate3d(' + (theDomNow - 3) * demoClientW + 'px,' + demoClientH + 'px,0px)'
+                                        }
+                                    }
+                                    theDomNow = theDomNow + 1;
+                                }
+                            }
+                            /*console.log(parseInt(theDomNow / 3 + 1) * demoClientH);*/
+                            if (ifMobile) {
+                                document.getElementById("myWork").getElementsByTagName("section")[0].style.height = theDomNow * demoClientH + 'px';
+                            } else {
+                                document.getElementById("myWork").getElementsByTagName("section")[0].style.height = (parseInt(theDomNow / 3 + 1)) * demoClientH + 'px';
+                            }
+                            return false;
+                        }
+                    }
 
 
-                /*注册事件*/
-                if (document.addEventListener) {
-                    document.addEventListener('DOMMouseScroll', scrollFunc, false);
-                }//W3C
-                window.onmousewheel = document.onmousewheel = scrollFunc;//IE/Opera/Chrome
+                    /*注册事件*/
+                    if (document.addEventListener) {
+                        document.addEventListener('DOMMouseScroll', scrollFunc, false);
+                    }//W3C
+                    window.onmousewheel = document.onmousewheel = scrollFunc;//IE/Opera/Chrome
 
-                changeTheNav(1);
+                    changeTheNav(1);
+                }, 500)
             }, 500)
-        }, 500)
-    }
-});
+        }
+    });
+}
 
 window.onload = function () {
     addEvent(window, 'scroll', onScroll);
@@ -190,17 +195,21 @@ function scrollFunc(e) {
             }
             e = e || window.event;
             if (e.wheelDelta) {//IE/Opera/Chrome
-                myScrollpage(e.wheelDelta)
+                myScrollpage(e.wheelDelta, 0)
             } else if (e.detail) {//Firefox
-                myScrollpage(e.detail)
+                myScrollpage(e.detail, 1)
             }
         }
     }
 }
 
-function myScrollpage(key) {
+function myScrollpage(key, num) {
+    //console.log(key+":"+num)
     var ispeed = 35;
     var speedChange = 1.25;
+    if (num) {
+        key = -key
+    }
     if (key > 0) {
         myScroll = setInterval(function () {
             var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
