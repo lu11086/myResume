@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b8544c1-4985-4c07-9841-a1328eecc09a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/resumePDF.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myResume.pdf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,7 +20,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1579">
+            <state relative-caret-position="675">
               <caret line="27" column="52" lean-forward="false" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="52" />
               <folding />
             </state>
@@ -32,7 +30,7 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
+            <state relative-caret-position="17650">
               <caret line="706" column="18" lean-forward="false" selection-start-line="706" selection-start-column="18" selection-end-line="706" selection-end-column="18" />
               <folding />
             </state>
@@ -52,8 +50,8 @@
       <file leaf-file-name="resume.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resume.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="209" column="49" lean-forward="true" selection-start-line="209" selection-start-column="49" selection-end-line="209" selection-end-column="49" />
+            <state relative-caret-position="75">
+              <caret line="62" column="68" lean-forward="true" selection-start-line="62" selection-start-column="68" selection-end-line="62" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -62,7 +60,7 @@
       <file leaf-file-name="preload.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/preload.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1900">
+            <state relative-caret-position="11300">
               <caret line="452" column="1" lean-forward="false" selection-start-line="452" selection-start-column="1" selection-end-line="452" selection-end-column="1" />
               <folding />
             </state>
@@ -73,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="250">
+              <first_editor relative-caret-position="150">
                 <caret line="6" column="169" lean-forward="false" selection-start-line="6" selection-start-column="169" selection-end-line="6" selection-end-column="169" />
                 <folding />
               </first_editor>
@@ -85,7 +83,7 @@
       <file leaf-file-name="demo.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/demo.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="725">
+            <state relative-caret-position="650">
               <caret line="26" column="146" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="146" />
               <folding />
             </state>
@@ -168,6 +166,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -182,7 +181,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -304,7 +302,8 @@
       <workItem from="1495676890646" duration="4372000" />
       <workItem from="1495722558421" duration="1124000" />
       <workItem from="1495756780047" duration="15406000" />
-      <workItem from="1495844357830" duration="6782000" />
+      <workItem from="1495844357830" duration="7661000" />
+      <workItem from="1496134667020" duration="1318000" />
     </task>
     <task id="LOCAL-00001" summary="追加项目预览遮罩">
       <created>1495522494757</created>
@@ -439,16 +438,23 @@
       <option name="project" value="LOCAL" />
       <updated>1495853311081</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="上传个人简历PDF版">
+      <created>1495854276773</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1495854276773</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177113000" />
+    <option name="totallyTimeSpent" value="179310000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1421875" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1421875" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994923" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -491,7 +497,8 @@
     <MESSAGE value="修复PC端页面惯性滚动会影响Demo预览界面的问题" />
     <MESSAGE value="调整动画频率使之视觉效果更流畅" />
     <MESSAGE value="修复火狐浏览器会出现的滚动bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复火狐浏览器会出现的滚动bug" />
+    <MESSAGE value="上传个人简历PDF版" />
+    <option name="LAST_COMMIT_MESSAGE" value="上传个人简历PDF版" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -786,31 +793,31 @@
     <entry file="file://$PROJECT_DIR$/data/package.json" />
     <entry file="file://$PROJECT_DIR$/data/demo.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
+        <state relative-caret-position="650">
           <caret line="26" column="146" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="146" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="250">
+          <first_editor relative-caret-position="150">
             <caret line="6" column="169" lean-forward="false" selection-start-line="6" selection-start-column="169" selection-end-line="6" selection-end-column="169" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/preload.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1900">
+        <state relative-caret-position="11300">
           <caret line="452" column="1" lean-forward="false" selection-start-line="452" selection-start-column="1" selection-end-line="452" selection-end-column="1" />
           <folding />
         </state>
@@ -818,7 +825,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
+        <state relative-caret-position="17650">
           <caret line="706" column="18" lean-forward="false" selection-start-line="706" selection-start-column="18" selection-end-line="706" selection-end-column="18" />
           <folding />
         </state>
@@ -826,7 +833,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1579">
+        <state relative-caret-position="675">
           <caret line="27" column="52" lean-forward="false" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="52" />
           <folding />
         </state>
@@ -842,8 +849,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resume.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="209" column="49" lean-forward="true" selection-start-line="209" selection-start-column="49" selection-end-line="209" selection-end-column="49" />
+        <state relative-caret-position="75">
+          <caret line="62" column="68" lean-forward="true" selection-start-line="62" selection-start-column="68" selection-end-line="62" selection-end-column="68" />
           <folding />
         </state>
       </provider>
