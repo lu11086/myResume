@@ -323,14 +323,16 @@ function changeDemoAjax(key) {
 }
 
 function backToTop() {
-    myBackTop = setInterval(function () {
-        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        var ispeed = scrollTop / 5;
-        if (scrollTop == 0) {
-            clearInterval(myBackTop);
-        }
-        document.documentElement.scrollTop = document.body.scrollTop = scrollTop - ispeed;
-    }, 30)
+    if (!myBackTop) {
+        myBackTop = setInterval(function () {
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            var ispeed = scrollTop / 5;
+            if (scrollTop == 0) {
+                clearInterval(myBackTop);
+            }
+            document.documentElement.scrollTop = document.body.scrollTop = scrollTop - ispeed;
+        }, 30)
+    }
 }
 
 function changeTheNav(key) {
