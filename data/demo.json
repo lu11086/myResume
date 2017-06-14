@@ -14,7 +14,7 @@
     "Title": "网络记事本离线版",
     "ImgSrc": "img/offlineNotepad.jpg",
     "ImgAlt": "网络记事本离线版首页",
-    "Infor": "自行设计的一套网页，模拟了后台传输数据过程，以json格式的数据，通过H5本地存储（localstrong）借以实现存储+读取效果。通过设置2个主要的localstrong数据库，实现了一个库用来存储日志、读取日志，另一个库用来储存被删除的日志，以便日后恢复或彻底删除（说白了就是回收站）。同时借用H5新标签添加已上传的文件。 &#10; PS：由于项目完成时间较早只预留了英文版与移动版接口，并未实现其功能。",
+    "Infor": "自行设计的一套网页，模拟了后台传输数据过程，以json格式的数据，通过H5本地存储（localstrong）借以实现存储+读取效果。通过设置2个主要的localstrong数据库，实现了一个库用来存储日志、读取日志，另一个库用来储存被删除的日志，以便日后恢复或彻底删除（说白了就是回收站）。同时借用H5新标签添加已上传的文件。 PS：由于项目完成时间较早只预留了英文版与移动版接口，并未实现其功能。",
     "ExtraHref": "https://lu11086.github.io/offlineNotepad/index.html",
     "ExtraText": "点击预览本项目",
     "CodeHref": "https://github.com/lu11086/offlineNotepad/tree/gh-pages"
