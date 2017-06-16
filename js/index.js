@@ -7,6 +7,7 @@ var inforTop, skillsTop, myWorkTop, contactMeTop, myNav, myNavTagA;
 var myDocHeight = document.documentElement.clientHeight;
 var ifMobile = false;
 var myDemoView = false;
+var backTop = false;
 
 /*判断是移动端还是PC端*/
 if (document.documentElement.clientWidth < 767) {
@@ -194,6 +195,10 @@ function scrollFunc(e) {
             if (myScroll) {
                 clearInterval(myScroll);
             }
+            if (backTop) {
+                clearInterval(myBackTop);
+                backTop = false;
+            }
             e = e || window.event;
             if (e.wheelDelta) {//IE/Opera/Chrome
                 myScrollpage(e.wheelDelta, 0)
@@ -208,9 +213,10 @@ function myScrollpage(key, num) {
     //console.log(key+":"+num)
     var ispeed = 35;
     var speedChange = 1.25;
-    if (num) {
+    if (num) {//不知道为啥Firefox竟然是相反数……只好取反了
         key = -key
     }
+
     if (key > 0) {
         myScroll = setInterval(function () {
             var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
@@ -324,12 +330,14 @@ function changeDemoAjax(key) {
 }
 
 function backToTop() {
-    if (!myBackTop) {
+    if (!backTop) {
+        backTop = true;
         myBackTop = setInterval(function () {
             var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             var ispeed = scrollTop / 5;
             if (scrollTop == 0) {
                 clearInterval(myBackTop);
+                backTop = false;
             }
             document.documentElement.scrollTop = document.body.scrollTop = scrollTop - ispeed;
         }, 30)
