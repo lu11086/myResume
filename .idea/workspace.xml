@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8b8544c1-4985-4c07-9841-a1328eecc09a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,11 +18,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="resume.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3825">
+              <caret line="215" column="71" lean-forward="false" selection-start-line="215" selection-start-column="66" selection-end-line="215" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="resume.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resume.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="191" column="21" lean-forward="true" selection-start-line="191" selection-start-column="21" selection-end-line="191" selection-end-column="21" />
+            <state relative-caret-position="125">
+              <caret line="195" column="16" lean-forward="true" selection-start-line="195" selection-start-column="16" selection-end-line="195" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -30,8 +41,8 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17850">
-              <caret line="714" column="28" lean-forward="false" selection-start-line="714" selection-start-column="28" selection-end-line="714" selection-end-column="28" />
+            <state relative-caret-position="-18625">
+              <caret line="18" column="15" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="18" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -40,8 +51,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="33" column="69" lean-forward="false" selection-start-line="33" selection-start-column="69" selection-end-line="33" selection-end-column="69" />
+            <state relative-caret-position="-650">
+              <caret line="204" column="43" lean-forward="false" selection-start-line="204" selection-start-column="43" selection-end-line="204" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -50,8 +61,8 @@
       <file leaf-file-name="preload.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/preload.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11300">
-              <caret line="452" column="1" lean-forward="false" selection-start-line="452" selection-start-column="1" selection-end-line="452" selection-end-column="1" />
+            <state relative-caret-position="225">
+              <caret line="430" column="40" lean-forward="true" selection-start-line="430" selection-start-column="40" selection-end-line="430" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -61,8 +72,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="150">
-                <caret line="6" column="169" lean-forward="false" selection-start-line="6" selection-start-column="169" selection-end-line="6" selection-end-column="169" />
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="10" lean-forward="true" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -73,8 +84,8 @@
       <file leaf-file-name="demo.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/demo.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="26" column="146" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="146" />
+            <state relative-caret-position="275">
+              <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -116,12 +127,12 @@
         <option value="$USER_HOME$/Desktop/Live demo for HighClass Portfolio WordPress Theme #50917_files/main-style.css" />
         <option value="$PROJECT_DIR$/data/package.json" />
         <option value="$PROJECT_DIR$/css/preload.css" />
-        <option value="$PROJECT_DIR$/data/demo.json" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/resume.html" />
+        <option value="$PROJECT_DIR$/data/demo.json" />
         <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/css/index.css" />
-        <option value="$PROJECT_DIR$/resume.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -155,6 +166,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -170,7 +182,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -309,7 +320,10 @@
       <workItem from="1497336993066" duration="313000" />
       <workItem from="1497337987516" duration="66000" />
       <workItem from="1497338195826" duration="827000" />
-      <workItem from="1497429668312" duration="594000" />
+      <workItem from="1497429668312" duration="1426000" />
+      <workItem from="1497487923907" duration="620000" />
+      <workItem from="1497571627172" duration="7541000" />
+      <workItem from="1498005730615" duration="374000" />
     </task>
     <task id="LOCAL-00001" summary="追加项目预览遮罩">
       <created>1495522494757</created>
@@ -500,14 +514,57 @@
       <option name="project" value="LOCAL" />
       <updated>1497430262155</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="更新简历名称">
+      <created>1497430271634</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1497430271634</updated>
+    </task>
+    <task id="LOCAL-00029" summary="修改pdf简历">
+      <created>1497430739948</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1497430739948</updated>
+    </task>
+    <task id="LOCAL-00030" summary="解决一些小bug">
+      <created>1497431091561</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1497431091561</updated>
+    </task>
+    <task id="LOCAL-00031" summary="修复回到顶部之前滑动滚轮会导致出现页面抖动的bug">
+      <created>1497578020005</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1497578020005</updated>
+    </task>
+    <task id="LOCAL-00032" summary="修复某些字体在IE中显示错误的bug">
+      <created>1497578072128</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1497578072128</updated>
+    </task>
+    <task id="LOCAL-00033" summary="更新PDF简历">
+      <created>1497593291978</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1497593291978</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186310000" />
+    <option name="totallyTimeSpent" value="195677000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14166667" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -535,8 +592,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="追加项目预览遮罩" />
-    <MESSAGE value="修复bug" />
     <MESSAGE value="增加json读取的可控遮罩部分" />
     <MESSAGE value="……忘了json文件要add下再上传了，webstorm这就坑了" />
     <MESSAGE value="修复切换Demo类型中有可能出现的bug" />
@@ -557,7 +612,12 @@
     <MESSAGE value="尝试更换png为webP格式失败——兼容性问题" />
     <MESSAGE value="更改下PDF简历" />
     <MESSAGE value="更新简历名称" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新简历名称" />
+    <MESSAGE value="修改pdf简历" />
+    <MESSAGE value="解决一些小bug" />
+    <MESSAGE value="修复回到顶部之前滑动滚轮会导致出现页面抖动的bug" />
+    <MESSAGE value="修复某些字体在IE中显示错误的bug" />
+    <MESSAGE value="更新PDF简历" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新PDF简历" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -852,8 +912,32 @@
     <entry file="file://$PROJECT_DIR$/data/package.json" />
     <entry file="file://$PROJECT_DIR$/data/demo.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="26" column="146" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="146" />
+        <state relative-caret-position="275">
+          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="195" column="16" lean-forward="true" selection-start-line="195" selection-start-column="16" selection-end-line="195" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18625">
+          <caret line="18" column="15" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="18" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-650">
+          <caret line="204" column="43" lean-forward="false" selection-start-line="204" selection-start-column="43" selection-end-line="204" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -866,8 +950,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="150">
-            <caret line="6" column="169" lean-forward="false" selection-start-line="6" selection-start-column="169" selection-end-line="6" selection-end-column="169" />
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="10" lean-forward="true" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
             <folding />
           </first_editor>
           <second_editor />
@@ -876,40 +960,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/preload.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11300">
-          <caret line="452" column="1" lean-forward="false" selection-start-line="452" selection-start-column="1" selection-end-line="452" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17850">
-          <caret line="714" column="28" lean-forward="false" selection-start-line="714" selection-start-column="28" selection-end-line="714" selection-end-column="28" />
+        <state relative-caret-position="225">
+          <caret line="430" column="40" lean-forward="true" selection-start-line="430" selection-start-column="40" selection-end-line="430" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="27" column="52" lean-forward="false" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="33" column="69" lean-forward="false" selection-start-line="33" selection-start-column="69" selection-end-line="33" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resume.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="191" column="21" lean-forward="true" selection-start-line="191" selection-start-column="21" selection-end-line="191" selection-end-column="21" />
+        <state relative-caret-position="3825">
+          <caret line="215" column="71" lean-forward="false" selection-start-line="215" selection-start-column="66" selection-end-line="215" selection-end-column="71" />
           <folding />
         </state>
       </provider>
